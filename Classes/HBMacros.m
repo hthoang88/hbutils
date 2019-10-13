@@ -91,3 +91,58 @@ void DISPATCH_ASYNC_AFTER(double second, dispatch_block_t block)
     });
 }
 
+
+BOOL IS_IPHONEX()
+{
+    if (IS_IPHONE) {
+        //detech iphone x
+        static BOOL isiPhoneX = NO;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                NSString *model = DEVICE_MODEL();
+                /*
+                 iPhone10,3 : iPhone X Global
+                 iPhone10,6 : iPhone X GSM
+                 iPhone11,2 : iPhone XS
+                 iPhone11,4 : iPhone XS Max
+                 iPhone11,6 : iPhone XS Max Global
+                 iPhone11,8 : iPhone XR
+                 iPhone12,1 : iPhone 11
+                 iPhone12,3 : iPhone 11 Pro
+                 iPhone12,5 : iPhone 11 Pro Max
+                 */
+                
+                isiPhoneX = [model isEqualToString:@"iPhone10,3"] ||
+                [model isEqualToString:@"iPhone10,6"] ||
+                [model rangeOfString:@"iPhone11,"].location == 0 ||//for iPhone Xs, Xr, Xs Max...
+                [model rangeOfString:@"iPhone12,"].location == 0;//for iPhone 11, 11 Pro, 11 Pro Max
+            });
+        });
+        return isiPhoneX;
+    }
+    return NO;
+}
+
+NSString* DEVICE_MODEL() {
+    //detech iphone x
+    static NSString *model = @"";
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+#if TARGET_IPHONE_SIMULATOR
+            model = NSProcessInfo.processInfo.environment[@"SIMULATOR_MODEL_IDENTIFIER"];
+#else
+            
+            struct utsname systemInfo;
+            uname(&systemInfo);
+            
+            model = [NSString stringWithCString:systemInfo.machine
+                                       encoding:NSUTF8StringEncoding];
+#endif
+        });
+    });
+    return model;
+}

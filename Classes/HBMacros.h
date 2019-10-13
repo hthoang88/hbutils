@@ -77,6 +77,8 @@ alpha:1.0]
 
 void DLoga(NSString *format,...);
 
+BOOL IS_IPHONEX();
+NSString* DEVICE_MODEL();
 #define TO_DAY [NSDate date]
 
 void DISPATCH_ASYNC(dispatch_block_t block);

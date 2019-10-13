@@ -14,6 +14,7 @@
 		AD80D9D523535EB60069D78D /* HBMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9CF23535EB60069D78D /* HBMacros.m */; };
 		AD80D9D623535EB60069D78D /* UIView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9D023535EB60069D78D /* UIView+HBUtils.m */; };
 		AD80D9D723535EB60069D78D /* UICollectionView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */; };
+		AD80D9D9235368020069D78D /* hbutils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AD80D9D8235368010069D78D /* hbutils.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AD80D9CF23535EB60069D78D /* HBMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMacros.m; sourceTree = "<group>"; };
 		AD80D9D023535EB60069D78D /* UIView+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HBUtils.m"; sourceTree = "<group>"; };
 		AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+HBUtils.h"; sourceTree = "<group>"; };
+		AD80D9D8235368010069D78D /* hbutils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hbutils.podspec; path = ../hbutils.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		AD038C812340DE7400E5668E = {
 			isa = PBXGroup;
 			children = (
+				AD80D9D8235368010069D78D /* hbutils.podspec */,
 				AD038C8D2340DE7400E5668E /* HBUtils */,
 				AD038C8C2340DE7400E5668E /* Products */,
 			);
@@ -68,12 +71,12 @@
 		AD80D9CB23535EB60069D78D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */,
 				AD80D9CD23535EB60069D78D /* HBMacros.h */,
-				AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */,
 				AD80D9CF23535EB60069D78D /* HBMacros.m */,
-				AD80D9D023535EB60069D78D /* UIView+HBUtils.m */,
 				AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */,
+				AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */,
+				AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */,
+				AD80D9D023535EB60069D78D /* UIView+HBUtils.m */,
 			);
 			name = Classes;
 			path = ../../Classes;
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD80D9D9235368020069D78D /* hbutils.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

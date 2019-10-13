@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "hbutils"
   spec.version      = "1.0.0"
-  spec.summary      = ""
+  spec.summary      = "This is the utilities project of Hoang Ho"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -67,7 +67,6 @@ The UYLPasswordManager class provides a simple wrapper around Apple Keychain
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  spec.platform     = :ios
   spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms

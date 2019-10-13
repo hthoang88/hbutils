@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		AD038C902340DE7400E5668E /* HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C8E2340DE7400E5668E /* HBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD038C982340DE9B00E5668E /* UIView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C962340DE9B00E5668E /* UIView+HBUtils.h */; };
-		AD038C992340DE9B00E5668E /* UIView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD038C972340DE9B00E5668E /* UIView+HBUtils.m */; };
-		AD038C9C2340DF5A00E5668E /* UICollectionView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C9A2340DF5A00E5668E /* UICollectionView+HBUtils.h */; };
-		AD038C9D2340DF5A00E5668E /* UICollectionView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD038C9B2340DF5A00E5668E /* UICollectionView+HBUtils.m */; };
-		AD038CA02340E03300E5668E /* HBMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C9E2340E03300E5668E /* HBMacros.h */; };
-		AD038CA12340E03300E5668E /* HBMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = AD038C9F2340E03300E5668E /* HBMacros.m */; };
+		AD80D9D223535EB60069D78D /* UIView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */; };
+		AD80D9D323535EB60069D78D /* HBMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9CD23535EB60069D78D /* HBMacros.h */; };
+		AD80D9D423535EB60069D78D /* UICollectionView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */; };
+		AD80D9D523535EB60069D78D /* HBMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9CF23535EB60069D78D /* HBMacros.m */; };
+		AD80D9D623535EB60069D78D /* UIView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9D023535EB60069D78D /* UIView+HBUtils.m */; };
+		AD80D9D723535EB60069D78D /* UICollectionView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD038C8B2340DE7400E5668E /* HBUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HBUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD038C8E2340DE7400E5668E /* HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtils.h; sourceTree = "<group>"; };
 		AD038C8F2340DE7400E5668E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD038C962340DE9B00E5668E /* UIView+HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HBUtils.h"; sourceTree = "<group>"; };
-		AD038C972340DE9B00E5668E /* UIView+HBUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HBUtils.m"; sourceTree = "<group>"; };
-		AD038C9A2340DF5A00E5668E /* UICollectionView+HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+HBUtils.h"; sourceTree = "<group>"; };
-		AD038C9B2340DF5A00E5668E /* UICollectionView+HBUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+HBUtils.m"; sourceTree = "<group>"; };
-		AD038C9E2340E03300E5668E /* HBMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMacros.h; sourceTree = "<group>"; };
-		AD038C9F2340E03300E5668E /* HBMacros.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMacros.m; sourceTree = "<group>"; };
+		AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HBUtils.h"; sourceTree = "<group>"; };
+		AD80D9CD23535EB60069D78D /* HBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBMacros.h; sourceTree = "<group>"; };
+		AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+HBUtils.m"; sourceTree = "<group>"; };
+		AD80D9CF23535EB60069D78D /* HBMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMacros.m; sourceTree = "<group>"; };
+		AD80D9D023535EB60069D78D /* UIView+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HBUtils.m"; sourceTree = "<group>"; };
+		AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+HBUtils.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,25 @@
 		AD038C8D2340DE7400E5668E /* HBUtils */ = {
 			isa = PBXGroup;
 			children = (
+				AD80D9CB23535EB60069D78D /* Classes */,
 				AD038C8E2340DE7400E5668E /* HBUtils.h */,
 				AD038C8F2340DE7400E5668E /* Info.plist */,
-				AD038C962340DE9B00E5668E /* UIView+HBUtils.h */,
-				AD038C972340DE9B00E5668E /* UIView+HBUtils.m */,
-				AD038C9A2340DF5A00E5668E /* UICollectionView+HBUtils.h */,
-				AD038C9B2340DF5A00E5668E /* UICollectionView+HBUtils.m */,
-				AD038C9E2340E03300E5668E /* HBMacros.h */,
-				AD038C9F2340E03300E5668E /* HBMacros.m */,
 			);
 			path = HBUtils;
+			sourceTree = "<group>";
+		};
+		AD80D9CB23535EB60069D78D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */,
+				AD80D9CD23535EB60069D78D /* HBMacros.h */,
+				AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */,
+				AD80D9CF23535EB60069D78D /* HBMacros.m */,
+				AD80D9D023535EB60069D78D /* UIView+HBUtils.m */,
+				AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */,
+			);
+			name = Classes;
+			path = ../../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +87,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD038C902340DE7400E5668E /* HBUtils.h in Headers */,
-				AD038C9C2340DF5A00E5668E /* UICollectionView+HBUtils.h in Headers */,
-				AD038C982340DE9B00E5668E /* UIView+HBUtils.h in Headers */,
-				AD038CA02340E03300E5668E /* HBMacros.h in Headers */,
+				AD80D9D223535EB60069D78D /* UIView+HBUtils.h in Headers */,
+				AD80D9D323535EB60069D78D /* HBMacros.h in Headers */,
+				AD80D9D723535EB60069D78D /* UICollectionView+HBUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD038CA12340E03300E5668E /* HBMacros.m in Sources */,
-				AD038C9D2340DF5A00E5668E /* UICollectionView+HBUtils.m in Sources */,
-				AD038C992340DE9B00E5668E /* UIView+HBUtils.m in Sources */,
+				AD80D9D523535EB60069D78D /* HBMacros.m in Sources */,
+				AD80D9D423535EB60069D78D /* UICollectionView+HBUtils.m in Sources */,
+				AD80D9D623535EB60069D78D /* UIView+HBUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

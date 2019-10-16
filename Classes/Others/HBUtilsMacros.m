@@ -93,7 +93,7 @@ void DISPATCH_ASYNC_AFTER(double second, dispatch_block_t block)
 }
 
 
-BOOL IS_IPHONEX()
+BOOL HAS_NOTCH_HEADER()
 {
     if (IS_IPHONE) {
         //detech iphone x

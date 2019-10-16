@@ -48,7 +48,6 @@ CGRect RECT_ADD_HEIGHT(CGRect rect, float value);
 
 #define IS_IPAD    (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPhone)
-#define USER_DEFAULT   [NSUserDefaults standardUserDefaults]
 #define dCurrentStatusBarOrientation [[UIApplication sharedApplication] statusBarOrientation]
 
 #define IS_PORTRAIT  (dCurrentStatusBarOrientation == UIInterfaceOrientationPortrait || dCurrentStatusBarOrientation ==UIInterfaceOrientationPortraitUpsideDown)
@@ -64,7 +63,7 @@ CGRect RECT_ADD_HEIGHT(CGRect rect, float value);
 
 void DLoga(NSString *format,...);
 
-BOOL IS_IPHONEX(void);
+BOOL HAS_NOTCH_HEADER(void);
 NSString* DEVICE_MODEL(void);
 
 

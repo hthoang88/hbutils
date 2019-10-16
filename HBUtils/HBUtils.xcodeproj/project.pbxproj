@@ -42,6 +42,8 @@
 		ADEEA01E2353706E00A91757 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEEA0192353706E00A91757 /* EXTScope.m */; };
 		ADEEA01F2353706E00A91757 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEEA01A2353706E00A91757 /* EXTRuntimeExtensions.m */; };
 		ADEEA0202353706E00A91757 /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA01B2353706E00A91757 /* EXTScope.h */; };
+		ADEEA0342357571600A91757 /* UITableView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEEA0322357571500A91757 /* UITableView+HBUtils.m */; };
+		ADEEA0352357571600A91757 /* UITableView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA0332357571600A91757 /* UITableView+HBUtils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,8 @@
 		ADEEA0192353706E00A91757 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		ADEEA01A2353706E00A91757 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
 		ADEEA01B2353706E00A91757 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		ADEEA0322357571500A91757 /* UITableView+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HBUtils.m"; sourceTree = "<group>"; };
+		ADEEA0332357571600A91757 /* UITableView+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HBUtils.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				AD80DA2023536EA50069D78D /* UILabel+HBUtils.m */,
 				AD80DA1C23536EA40069D78D /* UITextField+HBUtils.h */,
 				AD80DA1123536EA30069D78D /* UITextField+HBUtils.m */,
+				ADEEA0332357571600A91757 /* UITableView+HBUtils.h */,
+				ADEEA0322357571500A91757 /* UITableView+HBUtils.m */,
 				AD80D9DE23536C6F0069D78D /* HBDefineColor.h */,
 			);
 			name = Classes;
@@ -182,6 +188,7 @@
 			files = (
 				AD80DA3A23536EA60069D78D /* NSNumber+HBUtils.h in Headers */,
 				ADEEA01C2353706E00A91757 /* EXTRuntimeExtensions.h in Headers */,
+				ADEEA0352357571600A91757 /* UITableView+HBUtils.h in Headers */,
 				AD80DA2A23536EA60069D78D /* NSString+HBUtils.h in Headers */,
 				ADEEA01D2353706E00A91757 /* metamacros.h in Headers */,
 				AD80DA3023536EA60069D78D /* UIImage+HBUtils.h in Headers */,
@@ -282,6 +289,7 @@
 				AD80DA3823536EA60069D78D /* NSDictionary+HBUtils.m in Sources */,
 				AD80DA3523536EA60069D78D /* UIImage+HBUtils.m in Sources */,
 				AD80DA3623536EA60069D78D /* UILabel+HBUtils.m in Sources */,
+				ADEEA0342357571600A91757 /* UITableView+HBUtils.m in Sources */,
 				AD80D9DD23536C260069D78D /* HBUtilsMacros.m in Sources */,
 				AD80D9D623535EB60069D78D /* UIView+HBUtils.m in Sources */,
 				AD80DA3323536EA60069D78D /* NSString+HBUtils.m in Sources */,

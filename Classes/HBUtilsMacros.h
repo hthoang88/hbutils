@@ -46,8 +46,6 @@ CGRect RECT_ADD_Y(CGRect rect, float value);
 CGRect RECT_ADD_WIDTH(CGRect rect, float value);
 CGRect RECT_ADD_HEIGHT(CGRect rect, float value);
 
-//#define IS_4_INCHES ([UIDevice currentDevice].resolution == UIDeviceResolution_iPhoneRetina4 || [UIScreen mainScreen].bounds.size.height == 568.0 || [UIScreen mainScreen].bounds.size.width == 568.0)
-
 #define IS_IPAD    (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPhone)
 #define USER_DEFAULT   [NSUserDefaults standardUserDefaults]
@@ -55,17 +53,6 @@ CGRect RECT_ADD_HEIGHT(CGRect rect, float value);
 
 #define IS_PORTRAIT  (dCurrentStatusBarOrientation == UIInterfaceOrientationPortrait || dCurrentStatusBarOrientation ==UIInterfaceOrientationPortraitUpsideDown)
 #define IS_LANDSCAPE  (dCurrentStatusBarOrientation == UIInterfaceOrientationLandscapeLeft || dCurrentStatusBarOrientation ==UIInterfaceOrientationLandscapeRight)
-
-//#define IS_PORTRAIT UIDeviceOrientationIsPortrait([[UIApplication sharedApplication]statusBarOrientation])
-//#define IS_LANDSCAPE  UIDeviceOrientationIsLandscape([[UIApplication sharedApplication]statusBarOrientation])
-
-#define RGBCOLOR(r, g, b)             [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-#define RGBCOLOR_SAME(v)             [UIColor colorWithRed:(v)/255.0f green:(v)/255.0f blue:(v)/255.0f alpha:1]
-#define UIColorFromRGB(rgbValue) \
-[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
-blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
-alpha:1.0]
 
 #define DDebug 0
 
@@ -77,13 +64,16 @@ alpha:1.0]
 
 void DLoga(NSString *format,...);
 
-BOOL IS_IPHONEX();
-NSString* DEVICE_MODEL();
-#define TO_DAY [NSDate date]
+BOOL IS_IPHONEX(void);
+NSString* DEVICE_MODEL(void);
+
 
 void DISPATCH_ASYNC(dispatch_block_t block);
 
 void DISPATCH_ASYNC_AFTER(double second, dispatch_block_t block);
 
+#define TO_DAY [NSDate date]
 #define HEIGHT_SCREEN      UIScreen.mainScreen.bounds.size.height
 #define WIDTH_SCREEN      UIScreen.mainScreen.bounds.size.width
+#define NTF_CENTER              [NSNotificationCenter defaultCenter]
+#define USER_DEFAULT              [NSUserDefaults standardUserDefaults]

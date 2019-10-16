@@ -11,12 +11,33 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (HBUtils)
-- (UITapGestureRecognizer *)addTapGestureWithTarget:(id _Nullable)targer
-                                           selector:(SEL _Nullable)selector;
+- (UITapGestureRecognizer *)addTapGesture:(void(^)(UIView *btn))action;
+
+- (UILongPressGestureRecognizer*)addLongGestureAction:(void(^)(UIView *btn))action;
 
 - (void)border:(UIColor* _Nullable)color
           with:(CGFloat)borderWidth
         radius:(CGFloat)radius;
+
+@property (nonatomic) CGPoint frameOrigin;
+@property (nonatomic) CGSize frameSize;
+
+@property (nonatomic) CGFloat frameX;
+@property (nonatomic) CGFloat frameY;
+
+// Setting these modifies the origin but not the size.
+@property (nonatomic) CGFloat frameRight;
+@property (nonatomic) CGFloat frameBottom;
+
+@property (nonatomic) CGFloat frameWidth;
+@property (nonatomic) CGFloat frameHeight;
+
+@property (nonatomic, readonly) CGFloat frameCenterX;
+@property (nonatomic, readonly) CGFloat frameCenterY;
+
+- (BOOL)containsSubView:(UIView *)subView;
+- (BOOL)containsSubViewOfClassType:(Class)class;
+- (id)subViewWithClass:(Class)cl;
 
 @end
 

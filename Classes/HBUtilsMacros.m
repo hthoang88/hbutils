@@ -6,7 +6,8 @@
 //
 //
 
-#import "HBMacros.h"
+#import "HBUtilsMacros.h"
+#import <sys/utsname.h>
 
 // STRINGIFY
 

@@ -17,3 +17,16 @@ FOUNDATION_EXPORT const unsigned char HBUtilsVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <HBUtils/PublicHeader.h>
 
 
+#import "HBUtilsMacros.h"
+#import "UICollectionView+HBUtils.h"
+#import "UIView+HBUtils.h"
+#import "NSArray+HBUtils.h"
+#import "NSAttributedString+HBUtils.h"
+#import "NSDate+HBUtils.h"
+#import "NSDictionary+HBUtils.h"
+#import "NSObject+HBUtils.h"
+#import "NSString+HBUtils.h"
+#import "UIButton+HBUtils.h"
+#import "UIImage+HBUtils.h"
+#import "UILabel+HBUtils.h"
+#import "UITextField+HBUtils.h"

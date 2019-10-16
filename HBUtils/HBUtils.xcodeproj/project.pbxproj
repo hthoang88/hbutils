@@ -9,12 +9,39 @@
 /* Begin PBXBuildFile section */
 		AD038C902340DE7400E5668E /* HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C8E2340DE7400E5668E /* HBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD80D9D223535EB60069D78D /* UIView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */; };
-		AD80D9D323535EB60069D78D /* HBMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9CD23535EB60069D78D /* HBMacros.h */; };
 		AD80D9D423535EB60069D78D /* UICollectionView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */; };
-		AD80D9D523535EB60069D78D /* HBMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9CF23535EB60069D78D /* HBMacros.m */; };
 		AD80D9D623535EB60069D78D /* UIView+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9D023535EB60069D78D /* UIView+HBUtils.m */; };
 		AD80D9D723535EB60069D78D /* UICollectionView+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */; };
 		AD80D9D9235368020069D78D /* hbutils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AD80D9D8235368010069D78D /* hbutils.podspec */; };
+		AD80D9DC23536C260069D78D /* HBUtilsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80D9DA23536C260069D78D /* HBUtilsMacros.h */; };
+		AD80D9DD23536C260069D78D /* HBUtilsMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80D9DB23536C260069D78D /* HBUtilsMacros.m */; };
+		AD80DA2723536EA60069D78D /* UITextField+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA1123536EA30069D78D /* UITextField+HBUtils.m */; };
+		AD80DA2823536EA60069D78D /* NSObject+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA1223536EA30069D78D /* NSObject+HBUtils.m */; };
+		AD80DA2923536EA60069D78D /* NSArray+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1323536EA30069D78D /* NSArray+HBUtils.h */; };
+		AD80DA2A23536EA60069D78D /* NSString+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1423536EA30069D78D /* NSString+HBUtils.h */; };
+		AD80DA2B23536EA60069D78D /* UIButton+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1523536EA40069D78D /* UIButton+HBUtils.h */; };
+		AD80DA2C23536EA60069D78D /* NSObject+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1623536EA40069D78D /* NSObject+HBUtils.h */; };
+		AD80DA2D23536EA60069D78D /* NSAttributedString+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1723536EA40069D78D /* NSAttributedString+HBUtils.h */; };
+		AD80DA2E23536EA60069D78D /* NSNumber+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA1823536EA40069D78D /* NSNumber+HBUtils.m */; };
+		AD80DA2F23536EA60069D78D /* NSDate+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1923536EA40069D78D /* NSDate+HBUtils.h */; };
+		AD80DA3023536EA60069D78D /* UIImage+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1A23536EA40069D78D /* UIImage+HBUtils.h */; };
+		AD80DA3123536EA60069D78D /* UILabel+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1B23536EA40069D78D /* UILabel+HBUtils.h */; };
+		AD80DA3223536EA60069D78D /* UITextField+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA1C23536EA40069D78D /* UITextField+HBUtils.h */; };
+		AD80DA3323536EA60069D78D /* NSString+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA1D23536EA40069D78D /* NSString+HBUtils.m */; };
+		AD80DA3423536EA60069D78D /* NSDate+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA1E23536EA50069D78D /* NSDate+HBUtils.m */; };
+		AD80DA3523536EA60069D78D /* UIImage+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA1F23536EA50069D78D /* UIImage+HBUtils.m */; };
+		AD80DA3623536EA60069D78D /* UILabel+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA2023536EA50069D78D /* UILabel+HBUtils.m */; };
+		AD80DA3723536EA60069D78D /* NSAttributedString+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA2123536EA50069D78D /* NSAttributedString+HBUtils.m */; };
+		AD80DA3823536EA60069D78D /* NSDictionary+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA2223536EA50069D78D /* NSDictionary+HBUtils.m */; };
+		AD80DA3923536EA60069D78D /* NSArray+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA2323536EA50069D78D /* NSArray+HBUtils.m */; };
+		AD80DA3A23536EA60069D78D /* NSNumber+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA2423536EA50069D78D /* NSNumber+HBUtils.h */; };
+		AD80DA3B23536EA60069D78D /* NSDictionary+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD80DA2523536EA50069D78D /* NSDictionary+HBUtils.h */; };
+		AD80DA3C23536EA60069D78D /* UIButton+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD80DA2623536EA60069D78D /* UIButton+HBUtils.m */; };
+		ADEEA01C2353706E00A91757 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA0172353706E00A91757 /* EXTRuntimeExtensions.h */; };
+		ADEEA01D2353706E00A91757 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA0182353706E00A91757 /* metamacros.h */; };
+		ADEEA01E2353706E00A91757 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEEA0192353706E00A91757 /* EXTScope.m */; };
+		ADEEA01F2353706E00A91757 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEEA01A2353706E00A91757 /* EXTRuntimeExtensions.m */; };
+		ADEEA0202353706E00A91757 /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA01B2353706E00A91757 /* EXTScope.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +49,40 @@
 		AD038C8E2340DE7400E5668E /* HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtils.h; sourceTree = "<group>"; };
 		AD038C8F2340DE7400E5668E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HBUtils.h"; sourceTree = "<group>"; };
-		AD80D9CD23535EB60069D78D /* HBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBMacros.h; sourceTree = "<group>"; };
 		AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+HBUtils.m"; sourceTree = "<group>"; };
-		AD80D9CF23535EB60069D78D /* HBMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMacros.m; sourceTree = "<group>"; };
 		AD80D9D023535EB60069D78D /* UIView+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HBUtils.m"; sourceTree = "<group>"; };
 		AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+HBUtils.h"; sourceTree = "<group>"; };
 		AD80D9D8235368010069D78D /* hbutils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hbutils.podspec; path = ../hbutils.podspec; sourceTree = "<group>"; };
+		AD80D9DA23536C260069D78D /* HBUtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBUtilsMacros.h; sourceTree = "<group>"; };
+		AD80D9DB23536C260069D78D /* HBUtilsMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBUtilsMacros.m; sourceTree = "<group>"; };
+		AD80D9DE23536C6F0069D78D /* HBDefineColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBDefineColor.h; sourceTree = "<group>"; };
+		AD80DA1123536EA30069D78D /* UITextField+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA1223536EA30069D78D /* NSObject+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA1323536EA30069D78D /* NSArray+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1423536EA30069D78D /* NSString+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1523536EA40069D78D /* UIButton+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1623536EA40069D78D /* NSObject+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1723536EA40069D78D /* NSAttributedString+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1823536EA40069D78D /* NSNumber+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA1923536EA40069D78D /* NSDate+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1A23536EA40069D78D /* UIImage+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1B23536EA40069D78D /* UILabel+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1C23536EA40069D78D /* UITextField+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA1D23536EA40069D78D /* NSString+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA1E23536EA50069D78D /* NSDate+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA1F23536EA50069D78D /* UIImage+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA2023536EA50069D78D /* UILabel+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA2123536EA50069D78D /* NSAttributedString+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA2223536EA50069D78D /* NSDictionary+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA2323536EA50069D78D /* NSArray+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HBUtils.m"; sourceTree = "<group>"; };
+		AD80DA2423536EA50069D78D /* NSNumber+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA2523536EA50069D78D /* NSDictionary+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HBUtils.h"; sourceTree = "<group>"; };
+		AD80DA2623536EA60069D78D /* UIButton+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HBUtils.m"; sourceTree = "<group>"; };
+		ADEEA0172353706E00A91757 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		ADEEA0182353706E00A91757 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		ADEEA0192353706E00A91757 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		ADEEA01A2353706E00A91757 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		ADEEA01B2353706E00A91757 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +126,51 @@
 		AD80D9CB23535EB60069D78D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AD80D9CD23535EB60069D78D /* HBMacros.h */,
-				AD80D9CF23535EB60069D78D /* HBMacros.m */,
+				ADEEA0162353706E00A91757 /* extobjc */,
+				AD80D9DA23536C260069D78D /* HBUtilsMacros.h */,
+				AD80D9DB23536C260069D78D /* HBUtilsMacros.m */,
 				AD80D9D123535EB60069D78D /* UICollectionView+HBUtils.h */,
 				AD80D9CE23535EB60069D78D /* UICollectionView+HBUtils.m */,
 				AD80D9CC23535EB60069D78D /* UIView+HBUtils.h */,
 				AD80D9D023535EB60069D78D /* UIView+HBUtils.m */,
+				AD80DA1323536EA30069D78D /* NSArray+HBUtils.h */,
+				AD80DA2323536EA50069D78D /* NSArray+HBUtils.m */,
+				AD80DA1723536EA40069D78D /* NSAttributedString+HBUtils.h */,
+				AD80DA2123536EA50069D78D /* NSAttributedString+HBUtils.m */,
+				AD80DA1923536EA40069D78D /* NSDate+HBUtils.h */,
+				AD80DA1E23536EA50069D78D /* NSDate+HBUtils.m */,
+				AD80DA2523536EA50069D78D /* NSDictionary+HBUtils.h */,
+				AD80DA2223536EA50069D78D /* NSDictionary+HBUtils.m */,
+				AD80DA2423536EA50069D78D /* NSNumber+HBUtils.h */,
+				AD80DA1823536EA40069D78D /* NSNumber+HBUtils.m */,
+				AD80DA1623536EA40069D78D /* NSObject+HBUtils.h */,
+				AD80DA1223536EA30069D78D /* NSObject+HBUtils.m */,
+				AD80DA1423536EA30069D78D /* NSString+HBUtils.h */,
+				AD80DA1D23536EA40069D78D /* NSString+HBUtils.m */,
+				AD80DA1523536EA40069D78D /* UIButton+HBUtils.h */,
+				AD80DA2623536EA60069D78D /* UIButton+HBUtils.m */,
+				AD80DA1A23536EA40069D78D /* UIImage+HBUtils.h */,
+				AD80DA1F23536EA50069D78D /* UIImage+HBUtils.m */,
+				AD80DA1B23536EA40069D78D /* UILabel+HBUtils.h */,
+				AD80DA2023536EA50069D78D /* UILabel+HBUtils.m */,
+				AD80DA1C23536EA40069D78D /* UITextField+HBUtils.h */,
+				AD80DA1123536EA30069D78D /* UITextField+HBUtils.m */,
+				AD80D9DE23536C6F0069D78D /* HBDefineColor.h */,
 			);
 			name = Classes;
 			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		ADEEA0162353706E00A91757 /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				ADEEA0172353706E00A91757 /* EXTRuntimeExtensions.h */,
+				ADEEA0182353706E00A91757 /* metamacros.h */,
+				ADEEA0192353706E00A91757 /* EXTScope.m */,
+				ADEEA01A2353706E00A91757 /* EXTRuntimeExtensions.m */,
+				ADEEA01B2353706E00A91757 /* EXTScope.h */,
+			);
+			path = extobjc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,10 +180,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD80DA3A23536EA60069D78D /* NSNumber+HBUtils.h in Headers */,
+				ADEEA01C2353706E00A91757 /* EXTRuntimeExtensions.h in Headers */,
+				AD80DA2A23536EA60069D78D /* NSString+HBUtils.h in Headers */,
+				ADEEA01D2353706E00A91757 /* metamacros.h in Headers */,
+				AD80DA3023536EA60069D78D /* UIImage+HBUtils.h in Headers */,
 				AD038C902340DE7400E5668E /* HBUtils.h in Headers */,
+				AD80DA2923536EA60069D78D /* NSArray+HBUtils.h in Headers */,
+				AD80DA3223536EA60069D78D /* UITextField+HBUtils.h in Headers */,
+				AD80DA2D23536EA60069D78D /* NSAttributedString+HBUtils.h in Headers */,
+				AD80D9DC23536C260069D78D /* HBUtilsMacros.h in Headers */,
+				AD80DA2F23536EA60069D78D /* NSDate+HBUtils.h in Headers */,
+				AD80DA2B23536EA60069D78D /* UIButton+HBUtils.h in Headers */,
 				AD80D9D223535EB60069D78D /* UIView+HBUtils.h in Headers */,
-				AD80D9D323535EB60069D78D /* HBMacros.h in Headers */,
+				AD80DA3B23536EA60069D78D /* NSDictionary+HBUtils.h in Headers */,
+				AD80DA2C23536EA60069D78D /* NSObject+HBUtils.h in Headers */,
 				AD80D9D723535EB60069D78D /* UICollectionView+HBUtils.h in Headers */,
+				AD80DA3123536EA60069D78D /* UILabel+HBUtils.h in Headers */,
+				ADEEA0202353706E00A91757 /* EXTScope.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,9 +269,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD80D9D523535EB60069D78D /* HBMacros.m in Sources */,
+				ADEEA01E2353706E00A91757 /* EXTScope.m in Sources */,
+				AD80DA3923536EA60069D78D /* NSArray+HBUtils.m in Sources */,
+				AD80DA3723536EA60069D78D /* NSAttributedString+HBUtils.m in Sources */,
+				AD80DA3423536EA60069D78D /* NSDate+HBUtils.m in Sources */,
 				AD80D9D423535EB60069D78D /* UICollectionView+HBUtils.m in Sources */,
+				AD80DA2E23536EA60069D78D /* NSNumber+HBUtils.m in Sources */,
+				ADEEA01F2353706E00A91757 /* EXTRuntimeExtensions.m in Sources */,
+				AD80DA2723536EA60069D78D /* UITextField+HBUtils.m in Sources */,
+				AD80DA2823536EA60069D78D /* NSObject+HBUtils.m in Sources */,
+				AD80DA3C23536EA60069D78D /* UIButton+HBUtils.m in Sources */,
+				AD80DA3823536EA60069D78D /* NSDictionary+HBUtils.m in Sources */,
+				AD80DA3523536EA60069D78D /* UIImage+HBUtils.m in Sources */,
+				AD80DA3623536EA60069D78D /* UILabel+HBUtils.m in Sources */,
+				AD80D9DD23536C260069D78D /* HBUtilsMacros.m in Sources */,
 				AD80D9D623535EB60069D78D /* UIView+HBUtils.m in Sources */,
+				AD80DA3323536EA60069D78D /* NSString+HBUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +420,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HBUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +444,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HBUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

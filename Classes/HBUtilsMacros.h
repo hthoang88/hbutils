@@ -77,3 +77,9 @@ void DISPATCH_ASYNC_AFTER(double second, dispatch_block_t block);
 #define WIDTH_SCREEN      UIScreen.mainScreen.bounds.size.width
 #define NTF_CENTER              [NSNotificationCenter defaultCenter]
 #define USER_DEFAULT              [NSUserDefaults standardUserDefaults]
+
+NSString *DOCUMENTS_DIR(void);
+NSString *LIBRARY_DIR(void);
+NSString *TEMP_DIR(void);
+NSString *BUNDLE_DIR(void);
+NSString *NSDCIM_DIR(void);

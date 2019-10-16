@@ -21,11 +21,11 @@
 }
 
 - (void)registerEmptyCell {
-    [self registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"BA_EmptyCVC"];
+    [self registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"HBUtils_EmptyCVC"];
 }
 
 - (UICollectionViewCell *)emptyCell:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [self dequeueReusableCellWithReuseIdentifier:@"BA_EmptyCVC" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [self dequeueReusableCellWithReuseIdentifier:@"HBUtils_EmptyCVC" forIndexPath:indexPath];
     cell.contentView.backgroundColor = UIColor.clearColor;
     cell.backgroundColor = UIColor.clearColor;
     NSLog(@"Empty cell for collection view at %@", indexPath);

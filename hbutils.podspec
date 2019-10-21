@@ -94,25 +94,10 @@ The UYLPasswordManager class provides a simple wrapper around Apple Keychain
   #
 
 
-spec.subspec 'Categories' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = 'Classes/Categories/*.{h,m}'
-end
-
-spec.subspec 'Extobjc' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = 'Classes/Extobjc/*.{h,m}'
-end
-
-spec.subspec 'BaseClasses' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = 'Classes/BaseClasses/*.{h,m}'
-end
-
-spec.subspec 'Others' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = 'Classes/Others/*.{h,m}'
-end
+    spec.subspec 'Categories' do |ss|
+        ss.platform = :ios, '9.0'
+        ss.ios.source_files = 'Classes/Categories/*.{h,m}'
+    end
 
 
   # spec.source_files  = "Classes", "Classes/*.{h,m}", "Classes/*/*.{h,m}"

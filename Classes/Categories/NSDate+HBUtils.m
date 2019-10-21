@@ -8,35 +8,41 @@
 
 #import "NSDate+HBUtils.h"
 
+#define D_MINUTE    60
+#define D_HOUR        3600
+#define D_DAY        86400
+#define D_WEEK        604800
+#define D_YEAR        31556926
+
 // Thanks, AshFurrow
 static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal);
 
-@implementation NSDate (Helper)
+@implementation NSDate (HBUtils)
 ///Shared NSDateFormatter with dynamic format
 + (NSDateFormatter *)sharedDataFormatter {
     NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
-    NSDateFormatter *formatter = [threadDictionary objectForKey:@"BADateHelper_SharedDateFormatter"];
+    NSDateFormatter *formatter = [threadDictionary objectForKey:@"HBDateUtils_SharedDateFormatter"];
     if (!formatter) {
         formatter = [[NSDateFormatter alloc] init];
         [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
         //        [formatter setLocale:[NSLocale currentLocale]];
         NSTimeZone *zone = [NSTimeZone timeZoneForSecondsFromGMT:0];
         [formatter setTimeZone:zone];
-        [threadDictionary setObject:formatter forKey:@"BADateHelper_SharedDateFormatter"];
+        [threadDictionary setObject:formatter forKey:@"HBDateUtils_SharedDateFormatter"];
     }
     return formatter;
 }
 
 + (NSDateFormatter*)sharedLocalDateFormatter {
     NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
-    NSDateFormatter *formatter = [threadDictionary objectForKey:@"BADateHelper_sharedLocalDateFormatter"];
+    NSDateFormatter *formatter = [threadDictionary objectForKey:@"HBDateUtils_sharedLocalDateFormatter"];
     if (!formatter) {
         formatter = [[NSDateFormatter alloc] init];
         [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
         //        [formatter setLocale:[NSLocale currentLocale]];
         NSTimeZone *zone = [NSTimeZone localTimeZone];
         [formatter setTimeZone:zone];
-        [threadDictionary setObject:formatter forKey:@"BADateHelper_sharedLocalDateFormatter"];
+        [threadDictionary setObject:formatter forKey:@"HBDateUtils_sharedLocalDateFormatter"];
     }
     return formatter;
 }
@@ -48,7 +54,7 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return sharedCalendar;
 }
 
-- (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate
+- (BOOL)isEqualToDateIgnoringTime: (NSDate *) aDate
 {
     if (![aDate isKindOfClass:[NSDate class]]) {
         return NO;
@@ -60,12 +66,12 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
             (components1.day == components2.day));
 }
 
-- (BOOL) isToday
+- (BOOL)isToday
 {
     return [self isEqualToDateIgnoringTime:[NSDate date]];
 }
 
-- (BOOL) isYesterday
+- (BOOL)isYesterday
 {
     return [self isEqualToDateIgnoringTime:[NSDate dateYesterday]];
 }
@@ -75,22 +81,90 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return [NSDate dateWithDaysBeforeNow:1];
 }
 
-+ (NSDate *) dateWithDaysBeforeNow: (NSInteger) days
++ (NSDate *) dateWithDaysBeforeNow:(NSInteger)days
 {
     // Thanks, Jim Morrison
     return [[NSDate date] dateBySubtractingDays:days];
 }
 
-- (NSDate *) dateBySubtractingDays: (NSInteger) dDays
+
+#pragma mark - Adjusting Dates
+
+// Thaks, rsjohnson
+- (NSDate*)dateByAddingYears:(NSInteger)dYears
 {
-    return [self dateByAddingDays: (dDays * -1)];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setYear:dYears];
+    NSDate *newDate = [[NSDate getDefaultCalendar] dateByAddingComponents:dateComponents toDate:self options:0];
+    return newDate;
 }
 
-- (NSDate *) dateByAddingDays: (NSInteger) dDays
+- (NSDate*)dateBySubtractingYears:(NSInteger)dYears
+{
+    return [self dateByAddingYears:-dYears];
+}
+
+- (NSDate*)dateByAddingMonths:(NSInteger)dMonths
+{
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setMonth:dMonths];
+    NSDate *newDate = [[NSDate getDefaultCalendar] dateByAddingComponents:dateComponents toDate:self options:0];
+    return newDate;
+}
+
+- (NSDate*)dateBySubtractingMonths:(NSInteger)dMonths
+{
+    return [self dateByAddingMonths:-dMonths];
+}
+
+// Courtesy of dedan who mentions issues with Daylight Savings
+- (NSDate*)dateByAddingDays:(NSInteger)dDays
 {
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     [dateComponents setDay:dDays];
     NSDate *newDate = [[NSDate getDefaultCalendar] dateByAddingComponents:dateComponents toDate:self options:0];
+    return newDate;
+}
+
+- (NSDate*)dateBySubtractingDays:(NSInteger)dDays
+{
+    return [self dateByAddingDays: (dDays * -1)];
+}
+
+- (NSDate*)dateByAddingHours:(NSInteger)dHours
+{
+    NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + D_HOUR * dHours;
+    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
+    return newDate;
+}
+
+- (NSDate*)dateBySubtractingHours:(NSInteger)dHours
+{
+    return [self dateByAddingHours: (dHours * -1)];
+}
+
+- (NSDate*)dateByAddingMinutes:(NSInteger)dMinutes
+{
+    NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + D_MINUTE * dMinutes;
+    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
+    return newDate;
+}
+
+- (NSDate*)dateBySubtractingMinutes:(NSInteger)dMinutes
+{
+    return [self dateByAddingMinutes: (dMinutes * -1)];
+}
+
+- (NSDateComponents *) componentsWithOffsetFromDate: (NSDate *) aDate
+{
+    NSDateComponents *dTime = [[NSDate getDefaultCalendar] components:componentFlags fromDate:aDate toDate:self options:0];
+    return dTime;
+}
+
+- (NSDate*)dateByAddingSeconds:(NSInteger)dSeconds
+{
+    NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + dSeconds;
+    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
     return newDate;
 }
 
@@ -111,7 +185,7 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     return gregorian;
 }
 
--(NSDate *)dateWithOutTime {
+- (NSDate *)dateWithOutTime {
     NSCalendar *gregorian = [NSDate getDefaultCalendar];
     
     NSDateComponents* comps = [gregorian components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];

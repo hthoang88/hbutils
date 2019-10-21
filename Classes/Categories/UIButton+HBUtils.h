@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (Helper)
+@interface UIButton (HBUtils)
 
 - (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state;
 
 - (void)setTouchAction:(void(^)(UIButton *button))action;
 
--(void)setImageTintColor:(UIColor *)color forState:(UIControlState)state;
+- (void)setImageTintColor:(UIColor *)color forState:(UIControlState)state;
 @end
 

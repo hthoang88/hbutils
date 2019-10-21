@@ -93,7 +93,7 @@ void DISPATCH_ASYNC_AFTER(double second, dispatch_block_t block)
 }
 
 
-BOOL IS_IPHONEX()
+BOOL HAS_NOTCH_HEADER()
 {
     if (IS_IPHONE) {
         //detech iphone x
@@ -147,3 +147,9 @@ NSString* DEVICE_MODEL() {
     });
     return model;
 }
+
+NSString *DOCUMENTS_DIR(void) { return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]; }
+NSString *LIBRARY_DIR(void) { return [NSHomeDirectory() stringByAppendingPathComponent:@"Library"]; }
+NSString *TEMP_DIR(void) { return  [NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]; }
+NSString *BUNDLE_DIR(void) { return  [[NSBundle mainBundle] bundlePath]; }
+NSString *NSDCIM_DIR(void) { return  @"/var/mobile/Media/DCIM"; }

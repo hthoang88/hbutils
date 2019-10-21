@@ -51,4 +51,17 @@
     }
     return att;
 }
+
+- (void)addKernelWithValue:(float)value
+{
+    [self addAttribute:NSKernAttributeName value:@(value) range:NSMakeRange(0, self.string.length)];
+}
+
+- (void)setSpacingWithValue:(float)value align:(NSTextAlignment)align {
+    NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
+    style.lineSpacing = value;
+    style.alignment = align;
+    [self addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.string.length)];
+}
+
 @end

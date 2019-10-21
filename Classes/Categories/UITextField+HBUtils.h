@@ -9,7 +9,12 @@
 @import UIKit;
 @import Foundation;
 
-@interface UITextField (Helper)
+@interface UITextField (HBUtils)
 - (void)setPlaceHolderWithString:(NSString*)str color:(UIColor*)color font:(UIFont*)font;
 - (void)addLeftPagingWithWidth:(CGFloat)width;
+- (void)addToolbar:(id)target
+         leftTitle:(NSString*)leftTitle
+      leftSelector:(SEL)leftSelector
+        rightTitle:(NSString*)rightTitle
+     rightSelector:(SEL)rightSelector;
 @end

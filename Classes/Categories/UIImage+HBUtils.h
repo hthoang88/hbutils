@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface UIImageView (Helper)
+@interface UIImageView (HBUtils)
 - (void)updateImageWithRatingValue:(NSInteger)ratingValue;
 @end
 
@@ -28,5 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImageView (FacebookAnimation)
 - (void)setupFacebookViewAnimation;
 @end
+
+@interface HBTemplateImageView: UIImageView
+@end
+
 
 NS_ASSUME_NONNULL_END

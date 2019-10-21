@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSNumber (Helper)
+@interface NSNumber (HBUtils)
 NSString* MONEY_FORMATTER(float value);
 NSString* MONEY_FORMATTER_CURRENCY(float value, NSString *currencyCode);
 @end

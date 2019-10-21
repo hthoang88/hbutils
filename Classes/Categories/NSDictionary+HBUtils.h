@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (Helper)
+@interface NSDictionary (HBUtils)
 - (NSDictionary*)repair;
 - (NSString*)stringValue:(NSString*)key;
 - (NSNumber*)numberValue:(NSString*)key;

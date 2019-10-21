@@ -10,14 +10,14 @@
 #import <objc/runtime.h>
 #import "EXTScope.h"
 
-@implementation UIButton (Helper)
+@implementation UIButton (HBUtils)
 
 - (void)setBackgroundColor:(UIColor *)color forState:(UIControlState)state
 {
     [self setBackgroundImage:[self imageWithColor:color] forState:state];
 }
 
--(void)setImageTintColor:(UIColor *)color forState:(UIControlState)state
+- (void)setImageTintColor:(UIColor *)color forState:(UIControlState)state
 {
     if (self.imageView.image){
         UIImage *tintedImage = [self imageForState:state];

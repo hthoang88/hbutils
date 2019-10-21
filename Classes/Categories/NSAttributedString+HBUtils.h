@@ -6,7 +6,8 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import UIKit;
 
 @interface  NSAttributedString (HBUtils)
 + (NSAttributedString*)combines:(NSArray*)atts;
@@ -14,4 +15,6 @@
 
 @interface  NSMutableAttributedString (HBUtils)
 + (NSMutableAttributedString*)atributesStringWithData:(id)data;
+- (void)addKernelWithValue:(float)value;
+- (void)setSpacingWithValue:(float)value align:(NSTextAlignment)align;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "NSString+HBUtils.h"
+#import "UIImage+HBUtils.h"
 
 @implementation NSString (HBUtils)
 
@@ -68,7 +69,7 @@
     return str;
 }
 
-- (CGFloat)contentHeightWithFont:(UIFont*)font fitWidth:(CGFloat)fitWidth
+- (CGFloat)contentHeight:(UIFont*)font fixWidth:(CGFloat)fixWidth
 {
     if (self.length == 0) {
         return 0.0f;
@@ -77,7 +78,7 @@
                                           font, NSFontAttributeName,
                                           nil];
 
-    CGRect frame = [self boundingRectWithSize:CGSizeMake(fitWidth, MAXFLOAT)
+    CGRect frame = [self boundingRectWithSize:CGSizeMake(fixWidth, MAXFLOAT)
                                            options:NSStringDrawingUsesLineFragmentOrigin
                                         attributes:attributesDictionary
                                            context:nil];
@@ -85,13 +86,13 @@
     return frame.size.height;
 }
 
-- (CGFloat)contentWidthWithFont:(UIFont*)font fitHeight:(CGFloat)fitHeight
+- (CGFloat)contentWidth:(UIFont*)font fixHeight:(CGFloat)fixHeight
 {
     NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                           font, NSFontAttributeName,
                                           nil];
     
-    CGRect frame = [self boundingRectWithSize:CGSizeMake(MAXFLOAT, fitHeight)
+    CGRect frame = [self boundingRectWithSize:CGSizeMake(MAXFLOAT, fixHeight)
                                       options:NSStringDrawingUsesLineFragmentOrigin
                                    attributes:attributesDictionary
                                       context:nil];
@@ -173,5 +174,8 @@
     return self;
 }
 
+- (UIImage *)imageRenderTemplate {
+    return [UIImage imageNamed:self].imageByRenderTemplate;
+}
 
 @end

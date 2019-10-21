@@ -8,7 +8,7 @@
 
 #import "NSNumber+HBUtils.h"
 
-@implementation NSNumber (Helper)
+@implementation NSNumber (HBUtils)
 NSString* MONEY_FORMATTER(float value)
 {
     return MONEY_FORMATTER_CURRENCY(value, @"VND");

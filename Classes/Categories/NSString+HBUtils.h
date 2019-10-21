@@ -26,8 +26,9 @@
  */
 + (BOOL)isValidEmail:(NSString *)checkString;
 
-- (CGFloat)contentHeightWithFont:(UIFont*)font fitWidth:(CGFloat)fitWidth;
-- (CGFloat)contentWidthWithFont:(UIFont*)font fitHeight:(CGFloat)fitHeight;
+- (CGFloat)contentHeight:(UIFont*)font fixWidth:(CGFloat)fixWidth;
+
+- (CGFloat)contentWidth:(UIFont*)font fixHeight:(CGFloat)fixHeight;
 
 - (NSNumber*)numberValue;
 
@@ -40,4 +41,6 @@
 - (NSString *)stringByReplacePatterns:(NSArray *)paterns;
 
 - (NSString *)stringByRemoveHtmlTag;
+
+- (UIImage*)imageRenderTemplate;
 @end

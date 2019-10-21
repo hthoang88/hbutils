@@ -9,7 +9,7 @@
 #import "NSDictionary+HBUtils.h"
 #import "NSString+HBUtils.h"
 
-@implementation NSDictionary (Helper)
+@implementation NSDictionary (HBUtils)
 
 - (NSDictionary*)repair
 {

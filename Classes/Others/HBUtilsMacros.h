@@ -48,7 +48,6 @@ CGRect RECT_ADD_HEIGHT(CGRect rect, float value);
 
 #define IS_IPAD    (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPhone)
-#define USER_DEFAULT   [NSUserDefaults standardUserDefaults]
 #define dCurrentStatusBarOrientation [[UIApplication sharedApplication] statusBarOrientation]
 
 #define IS_PORTRAIT  (dCurrentStatusBarOrientation == UIInterfaceOrientationPortrait || dCurrentStatusBarOrientation ==UIInterfaceOrientationPortraitUpsideDown)
@@ -64,7 +63,7 @@ CGRect RECT_ADD_HEIGHT(CGRect rect, float value);
 
 void DLoga(NSString *format,...);
 
-BOOL IS_IPHONEX(void);
+BOOL HAS_NOTCH_HEADER(void);
 NSString* DEVICE_MODEL(void);
 
 
@@ -77,3 +76,9 @@ void DISPATCH_ASYNC_AFTER(double second, dispatch_block_t block);
 #define WIDTH_SCREEN      UIScreen.mainScreen.bounds.size.width
 #define NTF_CENTER              [NSNotificationCenter defaultCenter]
 #define USER_DEFAULT              [NSUserDefaults standardUserDefaults]
+
+NSString *DOCUMENTS_DIR(void);
+NSString *LIBRARY_DIR(void);
+NSString *TEMP_DIR(void);
+NSString *BUNDLE_DIR(void);
+NSString *NSDCIM_DIR(void);

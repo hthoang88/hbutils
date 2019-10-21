@@ -11,7 +11,7 @@
 #import "HBUtilsMacros.h"
 #import <objc/runtime.h>
 
-@implementation UIImage (Helper)
+@implementation UIImage (HBUtils)
 
 - (UIImage*)imageByRenderTemplate
 {
@@ -160,7 +160,7 @@
 @end
 
 
-@implementation UIImageView (Helper)
+@implementation UIImageView (HBUtils)
 - (void)updateImageWithRatingValue:(NSInteger)ratingValue
 {
     self.image = [UIImage imageNamed:[NSString stringWithFormat:@"rating%zd", ratingValue]].imageByRenderTemplate;
@@ -323,3 +323,22 @@ static char TAG_SCROLL_VIEW;
 }
 @end
 
+@implementation HBTemplateImageView
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setupUI];        
+    }
+    return self;
+}
+
+- (void)setupUI {
+    self.image = self.image.imageByRenderTemplate;
+}
+@end

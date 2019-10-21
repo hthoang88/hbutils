@@ -77,7 +77,7 @@ static char TAG_TAP_GESTURE_ACTION;
 }
 
 - (void)border:(UIColor* _Nullable)borderColor
-          with:(CGFloat)borderWidth
+          width:(CGFloat)borderWidth
         radius:(CGFloat)radius
 {
     if (borderColor) {

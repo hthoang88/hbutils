@@ -12,6 +12,7 @@
 - (NSDictionary*)repair;
 - (NSString*)stringValue:(NSString*)key;
 - (NSNumber*)numberValue:(NSString*)key;
+- (NSDictionary*)dictValue:(NSString*)key;
 - (NSMutableDictionary*)toMutable;
 @end
 

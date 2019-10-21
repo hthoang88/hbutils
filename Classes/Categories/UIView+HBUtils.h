@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UILongPressGestureRecognizer*)addLongGestureAction:(void(^)(UIView *btn))action;
 
 - (void)border:(UIColor* _Nullable)color
-          with:(CGFloat)borderWidth
+          width:(CGFloat)borderWidth
         radius:(CGFloat)radius;
 
 @property (nonatomic) CGPoint frameOrigin;

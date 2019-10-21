@@ -122,5 +122,13 @@
     }
     return result;
 }
+
+- (NSDictionary*)dictValue:(NSString*)key {
+    NSDictionary *result = self[key];
+    if ([result isKindOfClass:NSDictionary.class]) {
+        return result;
+    }
+    return nil;
+}
 @end
 

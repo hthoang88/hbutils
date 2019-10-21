@@ -93,6 +93,12 @@ The UYLPasswordManager class provides a simple wrapper around Apple Keychain
   #  Not including the public_header_files will make all headers public.
   #
 
+
+spec.subspec 'Categories' do |ss|
+ss.platform = :ios, '9.0'
+ss.ios.source_files = 'Classes/Categories/*.{h,m}'
+end
+
 spec.subspec 'Extobjc' do |ss|
 ss.platform = :ios, '9.0'
 ss.ios.source_files = 'Classes/Extobjc/*.{h,m}'
@@ -101,11 +107,6 @@ end
 spec.subspec 'BaseClasses' do |ss|
 ss.platform = :ios, '9.0'
 ss.ios.source_files = 'Classes/BaseClasses/*.{h,m}'
-end
-
-spec.subspec 'Categories' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = 'Classes/Categories/*.{h,m}'
 end
 
 spec.subspec 'Others' do |ss|

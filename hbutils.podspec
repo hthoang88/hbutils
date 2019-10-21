@@ -115,6 +115,11 @@ spec.subspec 'Others' do |ss|
     ss.ios.source_files = 'Classes/Others/*.{h,m}'
 end
 
+spec.subspec 'FastEasyMapping' do |ss|
+    ss.platform = :ios, '9.0'
+    ss.ios.source_files = 'Classes/FastEasyMapping/*.{h,m}'
+end
+
 
   # spec.source_files  = "Classes", "Classes/*.{h,m}", "Classes/*/*.{h,m}"
 

@@ -116,7 +116,7 @@ end
 
 spec.subspec 'FastEasyMapping' do |ss|
     ss.platform = :ios, '9.0'
-    ss.ios.source_files = 'Classes/FastEasyMapping/*.{h,m}'
+    ss.ios.source_files = "Classes/FastEasyMapping/**/*.{h,m}", "Classes/FastEasyMapping/*.{h,m}"
 end
 
 

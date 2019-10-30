@@ -123,6 +123,7 @@
     CGImageRelease(cgimg);
     return img;
 }
+
 - (UIImage *)imageByApplyingAlpha:(CGFloat)alpha
 {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);

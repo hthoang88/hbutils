@@ -9,6 +9,7 @@
 #import "UITextField+HBUtils.h"
 #import "HBDefineColor.h"
 #import "HBUtilsMacros.h"
+@import PureLayout;
 
 @implementation UITextField (HBUtils)
 - (void)setPlaceHolderWithString:(NSString*)str color:(UIColor*)color font:(UIFont*)font
@@ -23,6 +24,10 @@
     paddingView.backgroundColor = [UIColor clearColor];
     self.leftView = paddingView;
     self.leftViewMode = UITextFieldViewModeAlways;
+    if (paddingView.superview) {
+        [paddingView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) excludingEdge:ALEdgeRight];
+        [paddingView autoSetDimension:ALDimensionWidth toSize:width];
+    }
 }
 
 - (void)addToolbar:(id)target

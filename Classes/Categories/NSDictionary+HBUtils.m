@@ -37,7 +37,7 @@
             }
             else {
                 id tempValue = [self objectForKey:[allKeys objectAtIndex:i]];
-                if ([tempValue isKindOfClass:[NSString class]]){
+                if ([tempValue isKindOfClass:NSString.class]){
                     NSString *lowerString = [tempValue lowercaseString];
                     if ([lowerString isEqualToString:@"null"] ||
                         [lowerString isEqualToString:@"<null>"])
@@ -53,74 +53,27 @@
 - (NSString*)stringValue:(NSString*)key
 {
     id obj = self[key];
-    if ([obj isKindOfClass:[NSString class]]) {
+    if ([obj isKindOfClass:NSString.class]) {
         return [obj trim];
-    }else if([obj isKindOfClass:[NSNumber class]]){
+    }else if([obj isKindOfClass:NSNumber.class]){
         return [[obj stringValue] trim];
     }else if([obj isKindOfClass:[NSNull class]]){
         return @"";
     }
-    return obj;
+    return nil;
 }
 
 - (NSNumber*)numberValue:(NSString*)key
 {
     id obj = self[key];
-    if ([obj isKindOfClass:[NSNumber class]]) {
+    if ([obj isKindOfClass:NSNumber.class]) {
         return obj;
-    }else if([obj isKindOfClass:[NSString class]]){
+    }else if([obj isKindOfClass:NSString.class]){
         return @([obj integerValue]);
     }else if([obj isKindOfClass:[NSNull class]]){
         return @(0);
     }
-    return obj;
-}
-
-- (NSMutableDictionary*)toMutable
-{
-    return [NSMutableDictionary dictionaryWithDictionary:self];
-}
-@end
-
-@implementation NSDictionary (Encrypt)
-- (NSDictionary*)encrypt {
-    return [self encryptIgnoreKeys:nil];
-}
-
-- (NSDictionary*)decrypt {
-    return [self decryptIgnoreKeys:nil];
-}
-
-- (NSDictionary*)encryptIgnoreKeys:(NSArray *)keys {
-    NSMutableDictionary *result = @{}.mutableCopy;
-    for (id key in self.allKeys) {
-        id val = self[key];
-        if ([val isKindOfClass:[NSString class]]) {
-            if (!keys ||
-                ![keys containsObject:key]) {
-                result[key] = [val encrypt];
-            }
-        }else {
-            result[key] = val;
-        }
-    }
-    return result;
-}
-
-- (NSDictionary*)decryptIgnoreKeys:(NSArray *)keys {
-    NSMutableDictionary *result = @{}.mutableCopy;
-    for (id key in self.allKeys) {
-        id val = self[key];
-        if ([val isKindOfClass:[NSString class]]) {
-            if (!keys ||
-                ![keys containsObject:key]) {
-                result[key] = [val decrypt];
-            }
-        }else {
-            result[key] = val;
-        }
-    }
-    return result;
+    return nil;
 }
 
 - (NSDictionary*)dictValue:(NSString*)key {
@@ -130,5 +83,9 @@
     }
     return nil;
 }
-@end
 
+- (NSMutableDictionary*)toMutable
+{
+    return [NSMutableDictionary dictionaryWithDictionary:self];
+}
+@end

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HBUtilsBaseCell : UITableViewCell
 + (UINib*)nibOfCell;
-+ (CGFloat)cellHeight:(id)obj fixWidth:(CGFloat)fixWidth;
++ (CGFloat)cellHeight:(id _Nullable)obj fixWidth:(CGFloat)fixWidth;
 + (NSString*)cellId;
 
 @property (strong, nonatomic) id model;

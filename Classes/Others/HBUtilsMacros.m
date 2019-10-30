@@ -148,8 +148,50 @@ NSString* DEVICE_MODEL() {
     return model;
 }
 
+void POST_NTF(NSString *name)
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil];
+}
+
+
 NSString *DOCUMENTS_DIR(void) { return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]; }
 NSString *LIBRARY_DIR(void) { return [NSHomeDirectory() stringByAppendingPathComponent:@"Library"]; }
 NSString *TEMP_DIR(void) { return  [NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]; }
 NSString *BUNDLE_DIR(void) { return  [[NSBundle mainBundle] bundlePath]; }
 NSString *NSDCIM_DIR(void) { return  @"/var/mobile/Media/DCIM"; }
+
+
+void USER_DEFAULT_SET(NSString *key,NSInteger value, BOOL synchronize) {
+    [USER_DEFAULT setInteger:value forKey:key];
+    if (synchronize) {
+        [USER_DEFAULT synchronize];
+    }
+}
+
+void USER_DEFAULT_UPDATE(NSString *key,NSInteger value, BOOL synchronize) {
+    NSInteger val = [USER_DEFAULT integerForKey:key];
+    val += value;
+    [USER_DEFAULT setInteger:val forKey:key];
+    DLog(@"%@ - %ld", key, val);
+    if (synchronize) {
+        [USER_DEFAULT synchronize];
+    }
+}
+
+UIFont* FONT_REGULAR(float pointSize)
+{
+    return [UIFont systemFontOfSize:pointSize];
+}
+UIFont* FONT_BOLD(float pointSize)
+{
+    return [UIFont boldSystemFontOfSize:pointSize];
+}
+UIFont* FONT_LIGHT(float pointSize)
+{
+    return [UIFont fontWithName:@"HelveticaNeue-Light" size:pointSize];
+}
+
+UIFont* FONT_MEDIUM(float pointSize)
+{
+    return [UIFont fontWithName:@"HelveticaNeue-Medium" size:pointSize];
+}

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HBUtilsBaseCVC : UICollectionViewCell
 + (UINib*)nibOfCell;
-+ (CGSize)cellSize:(id)obj colletionView:(UICollectionView*)clv;
++ (CGSize)cellSize:(id _Nullable)obj colletionView:(UICollectionView*)clv;
 + (NSString*)cellId;
 
 @property (strong, nonatomic) id model;

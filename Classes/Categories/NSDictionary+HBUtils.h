@@ -15,11 +15,3 @@
 - (NSDictionary*)dictValue:(NSString*)key;
 - (NSMutableDictionary*)toMutable;
 @end
-
-@interface NSDictionary (Encrypt)
-- (NSDictionary*)encrypt;
-- (NSDictionary*)decrypt;
-
-- (NSDictionary*)encryptIgnoreKeys:(NSArray *)keys;
-- (NSDictionary*)decryptIgnoreKeys:(NSArray *)keys;
-@end

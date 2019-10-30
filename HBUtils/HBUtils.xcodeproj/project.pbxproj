@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD038C902340DE7400E5668E /* HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C8E2340DE7400E5668E /* HBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD286B5923693B540042A291 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD286B5823693B540042A291 /* GoogleMobileAds.framework */; };
 		AD6EC442235D38D000F3AC62 /* HBUtilsBaseManagedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6EC440235D38D000F3AC62 /* HBUtilsBaseManagedObject.h */; };
 		AD6EC443235D38D000F3AC62 /* HBUtilsBaseManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6EC441235D38D000F3AC62 /* HBUtilsBaseManagedObject.m */; };
 		AD6EC467235D3A4100F3AC62 /* HBUtilsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6EC445235D3A4100F3AC62 /* HBUtilsMacros.h */; };
@@ -83,6 +84,30 @@
 		AD6EC53F235D48DD00F3AC62 /* FEMTypeIntrospection.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6EC518235D48DD00F3AC62 /* FEMTypeIntrospection.h */; };
 		AD6EC540235D48DD00F3AC62 /* FEMTypeIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6EC519235D48DD00F3AC62 /* FEMTypeIntrospection.m */; };
 		AD80D9D9235368020069D78D /* hbutils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = AD80D9D8235368010069D78D /* hbutils.podspec */; };
+		AD891C82236925AE005F60AE /* HBUtilities+Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C80236925AE005F60AE /* HBUtilities+Alert.h */; };
+		AD891C83236925AE005F60AE /* HBUtilities+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891C81236925AE005F60AE /* HBUtilities+Alert.m */; };
+		AD891C8A236927CC005F60AE /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891C85236927CC005F60AE /* SIAlertView.m */; };
+		AD891C8B236927CC005F60AE /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD891C86236927CC005F60AE /* SIAlertView.bundle */; };
+		AD891C8C236927CC005F60AE /* UIWindow+SIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C87236927CC005F60AE /* UIWindow+SIUtils.h */; };
+		AD891C8D236927CC005F60AE /* SIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C88236927CC005F60AE /* SIAlertView.h */; };
+		AD891C8E236927CC005F60AE /* UIWindow+SIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891C89236927CC005F60AE /* UIWindow+SIUtils.m */; };
+		AD891C9723692BEB005F60AE /* NSError+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C9323692BEA005F60AE /* NSError+HBUtils.h */; };
+		AD891C9823692BEB005F60AE /* NSURLSessionTask+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891C9423692BEA005F60AE /* NSURLSessionTask+HBUtils.m */; };
+		AD891C9923692BEB005F60AE /* NSError+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891C9523692BEB005F60AE /* NSError+HBUtils.m */; };
+		AD891C9A23692BEB005F60AE /* NSURLSessionTask+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C9623692BEB005F60AE /* NSURLSessionTask+HBUtils.h */; };
+		AD891CA123692FF6005F60AE /* HBUtiliyAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C9F23692FF5005F60AE /* HBUtiliyAPIManager.h */; };
+		AD891CA223692FF6005F60AE /* HBUtiliyAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891CA023692FF5005F60AE /* HBUtiliyAPIManager.m */; };
+		AD95299C23668BC9000D8195 /* UIViewController+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD95299A23668BC9000D8195 /* UIViewController+HBUtils.h */; };
+		AD95299D23668BC9000D8195 /* UIViewController+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */; };
+		AD9529A023668CBC000D8195 /* HBUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AD95299E23668CBC000D8195 /* HBUtilities.h */; };
+		AD9529A123668CBC000D8195 /* HBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95299F23668CBC000D8195 /* HBUtilities.m */; };
+		AD9529AA2366A316000D8195 /* HBAdRewardProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A32366A316000D8195 /* HBAdRewardProvider.h */; };
+		AD9529AB2366A316000D8195 /* HBBaseRewardVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A42366A316000D8195 /* HBBaseRewardVideo.h */; };
+		AD9529AC2366A316000D8195 /* HBGoogleAdReward.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9529A52366A316000D8195 /* HBGoogleAdReward.m */; };
+		AD9529AD2366A316000D8195 /* HBAdRewardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9529A62366A316000D8195 /* HBAdRewardProvider.m */; };
+		AD9529AE2366A316000D8195 /* HBAdRewardProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A72366A316000D8195 /* HBAdRewardProtocol.h */; };
+		AD9529AF2366A316000D8195 /* HBGoogleAdReward.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A82366A316000D8195 /* HBGoogleAdReward.h */; };
+		AD9529B02366A316000D8195 /* HBBaseRewardVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */; };
 		ADCEB6762359A1ED00794BE5 /* HBUtilsBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCEB6742359A1ED00794BE5 /* HBUtilsBaseCell.h */; };
 		ADCEB6772359A1ED00794BE5 /* HBUtilsBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCEB6752359A1ED00794BE5 /* HBUtilsBaseCell.m */; };
 		ADCEB67A2359A28700794BE5 /* HBUtilsBaseCVC.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCEB6782359A28700794BE5 /* HBUtilsBaseCVC.h */; };
@@ -103,6 +128,7 @@
 		AD038C8B2340DE7400E5668E /* HBUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HBUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD038C8E2340DE7400E5668E /* HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtils.h; sourceTree = "<group>"; };
 		AD038C8F2340DE7400E5668E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD286B5823693B540042A291 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		AD6EC440235D38D000F3AC62 /* HBUtilsBaseManagedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseManagedObject.h; sourceTree = "<group>"; };
 		AD6EC441235D38D000F3AC62 /* HBUtilsBaseManagedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilsBaseManagedObject.m; sourceTree = "<group>"; };
 		AD6EC445235D3A4100F3AC62 /* HBUtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBUtilsMacros.h; sourceTree = "<group>"; };
@@ -178,6 +204,30 @@
 		AD6EC518235D48DD00F3AC62 /* FEMTypeIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMTypeIntrospection.h; sourceTree = "<group>"; };
 		AD6EC519235D48DD00F3AC62 /* FEMTypeIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMTypeIntrospection.m; sourceTree = "<group>"; };
 		AD80D9D8235368010069D78D /* hbutils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hbutils.podspec; path = ../hbutils.podspec; sourceTree = "<group>"; };
+		AD891C80236925AE005F60AE /* HBUtilities+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HBUtilities+Alert.h"; sourceTree = "<group>"; };
+		AD891C81236925AE005F60AE /* HBUtilities+Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HBUtilities+Alert.m"; sourceTree = "<group>"; };
+		AD891C85236927CC005F60AE /* SIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAlertView.m; sourceTree = "<group>"; };
+		AD891C86236927CC005F60AE /* SIAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SIAlertView.bundle; sourceTree = "<group>"; };
+		AD891C87236927CC005F60AE /* UIWindow+SIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SIUtils.h"; sourceTree = "<group>"; };
+		AD891C88236927CC005F60AE /* SIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAlertView.h; sourceTree = "<group>"; };
+		AD891C89236927CC005F60AE /* UIWindow+SIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SIUtils.m"; sourceTree = "<group>"; };
+		AD891C9323692BEA005F60AE /* NSError+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+HBUtils.h"; sourceTree = "<group>"; };
+		AD891C9423692BEA005F60AE /* NSURLSessionTask+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionTask+HBUtils.m"; sourceTree = "<group>"; };
+		AD891C9523692BEB005F60AE /* NSError+HBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+HBUtils.m"; sourceTree = "<group>"; };
+		AD891C9623692BEB005F60AE /* NSURLSessionTask+HBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionTask+HBUtils.h"; sourceTree = "<group>"; };
+		AD891C9F23692FF5005F60AE /* HBUtiliyAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBUtiliyAPIManager.h; sourceTree = "<group>"; };
+		AD891CA023692FF5005F60AE /* HBUtiliyAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBUtiliyAPIManager.m; sourceTree = "<group>"; };
+		AD95299A23668BC9000D8195 /* UIViewController+HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HBUtils.h"; sourceTree = "<group>"; };
+		AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HBUtils.m"; sourceTree = "<group>"; };
+		AD95299E23668CBC000D8195 /* HBUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilities.h; sourceTree = "<group>"; };
+		AD95299F23668CBC000D8195 /* HBUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilities.m; sourceTree = "<group>"; };
+		AD9529A32366A316000D8195 /* HBAdRewardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAdRewardProvider.h; sourceTree = "<group>"; };
+		AD9529A42366A316000D8195 /* HBBaseRewardVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBaseRewardVideo.h; sourceTree = "<group>"; };
+		AD9529A52366A316000D8195 /* HBGoogleAdReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBGoogleAdReward.m; sourceTree = "<group>"; };
+		AD9529A62366A316000D8195 /* HBAdRewardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAdRewardProvider.m; sourceTree = "<group>"; };
+		AD9529A72366A316000D8195 /* HBAdRewardProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAdRewardProtocol.h; sourceTree = "<group>"; };
+		AD9529A82366A316000D8195 /* HBGoogleAdReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBGoogleAdReward.h; sourceTree = "<group>"; };
+		AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBaseRewardVideo.m; sourceTree = "<group>"; };
 		ADCEB6742359A1ED00794BE5 /* HBUtilsBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseCell.h; sourceTree = "<group>"; };
 		ADCEB6752359A1ED00794BE5 /* HBUtilsBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilsBaseCell.m; sourceTree = "<group>"; };
 		ADCEB6782359A28700794BE5 /* HBUtilsBaseCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseCVC.h; sourceTree = "<group>"; };
@@ -197,6 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD286B5923693B540042A291 /* GoogleMobileAds.framework in Frameworks */,
 				D24ADBA4BF34D54D1A5E02FF /* Pods_HBUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +285,7 @@
 		AD038C8D2340DE7400E5668E /* HBUtils */ = {
 			isa = PBXGroup;
 			children = (
+				AD286B5723693B540042A291 /* VendoredFrameworks */,
 				AD80D9CB23535EB60069D78D /* Classes */,
 				AD038C8E2340DE7400E5668E /* HBUtils.h */,
 				AD038C8F2340DE7400E5668E /* Info.plist */,
@@ -241,12 +293,26 @@
 			path = HBUtils;
 			sourceTree = "<group>";
 		};
+		AD286B5723693B540042A291 /* VendoredFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD286B5823693B540042A291 /* GoogleMobileAds.framework */,
+			);
+			path = VendoredFrameworks;
+			sourceTree = SOURCE_ROOT;
+		};
 		AD6EC444235D3A4100F3AC62 /* Others */ = {
 			isa = PBXGroup;
 			children = (
 				AD6EC447235D3A4100F3AC62 /* HBDefineColor.h */,
 				AD6EC445235D3A4100F3AC62 /* HBUtilsMacros.h */,
 				AD6EC446235D3A4100F3AC62 /* HBUtilsMacros.m */,
+				AD95299E23668CBC000D8195 /* HBUtilities.h */,
+				AD95299F23668CBC000D8195 /* HBUtilities.m */,
+				AD891C80236925AE005F60AE /* HBUtilities+Alert.h */,
+				AD891C81236925AE005F60AE /* HBUtilities+Alert.m */,
+				AD891C9F23692FF5005F60AE /* HBUtiliyAPIManager.h */,
+				AD891CA023692FF5005F60AE /* HBUtiliyAPIManager.m */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -262,12 +328,16 @@
 				AD6EC44F235D3A4100F3AC62 /* NSDate+HBUtils.m */,
 				AD6EC449235D3A4100F3AC62 /* NSDictionary+HBUtils.h */,
 				AD6EC458235D3A4100F3AC62 /* NSDictionary+HBUtils.m */,
+				AD891C9323692BEA005F60AE /* NSError+HBUtils.h */,
+				AD891C9523692BEB005F60AE /* NSError+HBUtils.m */,
 				AD6EC461235D3A4100F3AC62 /* NSNumber+HBUtils.h */,
 				AD6EC452235D3A4100F3AC62 /* NSNumber+HBUtils.m */,
 				AD6EC450235D3A4100F3AC62 /* NSObject+HBUtils.h */,
 				AD6EC45A235D3A4100F3AC62 /* NSObject+HBUtils.m */,
 				AD6EC465235D3A4100F3AC62 /* NSString+HBUtils.h */,
 				AD6EC455235D3A4100F3AC62 /* NSString+HBUtils.m */,
+				AD891C9623692BEB005F60AE /* NSURLSessionTask+HBUtils.h */,
+				AD891C9423692BEA005F60AE /* NSURLSessionTask+HBUtils.m */,
 				AD6EC453235D3A4100F3AC62 /* UIButton+HBUtils.h */,
 				AD6EC460235D3A4100F3AC62 /* UIButton+HBUtils.m */,
 				AD6EC464235D3A4100F3AC62 /* UICollectionView+HBUtils.h */,
@@ -284,6 +354,8 @@
 				AD6EC454235D3A4100F3AC62 /* UITextView+HBUtils.m */,
 				AD6EC44E235D3A4100F3AC62 /* UIView+HBUtils.h */,
 				AD6EC45C235D3A4100F3AC62 /* UIView+HBUtils.m */,
+				AD95299A23668BC9000D8195 /* UIViewController+HBUtils.h */,
+				AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -441,6 +513,8 @@
 		AD80D9CB23535EB60069D78D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AD891C84236927CC005F60AE /* SIAlertView */,
+				AD9529A22366A316000D8195 /* AdReward */,
 				AD6EC4E5235D48DC00F3AC62 /* FastEasyMapping */,
 				AD6EC448235D3A4100F3AC62 /* Categories */,
 				AD6EC444235D3A4100F3AC62 /* Others */,
@@ -449,6 +523,32 @@
 			);
 			name = Classes;
 			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		AD891C84236927CC005F60AE /* SIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				AD891C85236927CC005F60AE /* SIAlertView.m */,
+				AD891C86236927CC005F60AE /* SIAlertView.bundle */,
+				AD891C87236927CC005F60AE /* UIWindow+SIUtils.h */,
+				AD891C88236927CC005F60AE /* SIAlertView.h */,
+				AD891C89236927CC005F60AE /* UIWindow+SIUtils.m */,
+			);
+			path = SIAlertView;
+			sourceTree = "<group>";
+		};
+		AD9529A22366A316000D8195 /* AdReward */ = {
+			isa = PBXGroup;
+			children = (
+				AD9529A72366A316000D8195 /* HBAdRewardProtocol.h */,
+				AD9529A32366A316000D8195 /* HBAdRewardProvider.h */,
+				AD9529A62366A316000D8195 /* HBAdRewardProvider.m */,
+				AD9529A42366A316000D8195 /* HBBaseRewardVideo.h */,
+				AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */,
+				AD9529A82366A316000D8195 /* HBGoogleAdReward.h */,
+				AD9529A52366A316000D8195 /* HBGoogleAdReward.m */,
+			);
+			path = AdReward;
 			sourceTree = "<group>";
 		};
 		ADCEB6732359A1D400794BE5 /* BaseClasses */ = {
@@ -501,14 +601,18 @@
 				AD6EC524235D48DD00F3AC62 /* FEMObjectMapping.h in Headers */,
 				AD6EC46F235D3A4100F3AC62 /* UIView+HBUtils.h in Headers */,
 				AD6EC532235D48DD00F3AC62 /* FEMAssignmentPolicyMetadata.h in Headers */,
+				AD9529AB2366A316000D8195 /* HBBaseRewardVideo.h in Headers */,
 				AD6EC469235D3A4100F3AC62 /* HBDefineColor.h in Headers */,
 				AD6EC538235D48DD00F3AC62 /* FEMExcludableCollection.h in Headers */,
 				AD6EC52F235D48DD00F3AC62 /* FEMCache.h in Headers */,
 				AD6EC46A235D3A4100F3AC62 /* NSDictionary+HBUtils.h in Headers */,
+				AD9529AA2366A316000D8195 /* HBAdRewardProvider.h in Headers */,
 				AD6EC486235D3A4100F3AC62 /* NSString+HBUtils.h in Headers */,
+				AD891C82236925AE005F60AE /* HBUtilities+Alert.h in Headers */,
 				AD6EC474235D3A4100F3AC62 /* UIButton+HBUtils.h in Headers */,
 				AD6EC539235D48DD00F3AC62 /* FEMMergeableCollection.h in Headers */,
 				AD6EC442235D38D000F3AC62 /* HBUtilsBaseManagedObject.h in Headers */,
+				AD891C8D236927CC005F60AE /* SIAlertView.h in Headers */,
 				AD6EC523235D48DD00F3AC62 /* FEMRelationship.h in Headers */,
 				AD6EC51A235D48DD00F3AC62 /* FEMAttributeMapping.h in Headers */,
 				AD6EC51D235D48DD00F3AC62 /* FEMAttribute+Extension.h in Headers */,
@@ -516,19 +620,25 @@
 				AD6EC528235D48DD00F3AC62 /* FEMMapping.h in Headers */,
 				AD6EC521235D48DD00F3AC62 /* FEMRelationshipMapping.h in Headers */,
 				ADEEA01D2353706E00A91757 /* metamacros.h in Headers */,
+				AD95299C23668BC9000D8195 /* UIViewController+HBUtils.h in Headers */,
 				AD038C902340DE7400E5668E /* HBUtils.h in Headers */,
 				AD6EC467235D3A4100F3AC62 /* HBUtilsMacros.h in Headers */,
 				AD6EC484235D3A4100F3AC62 /* UIImage+HBUtils.h in Headers */,
+				AD891C8C236927CC005F60AE /* UIWindow+SIUtils.h in Headers */,
 				ADCEB6762359A1ED00794BE5 /* HBUtilsBaseCell.h in Headers */,
 				AD6EC52E235D48DD00F3AC62 /* FEMSerializer.h in Headers */,
 				AD6EC482235D3A4100F3AC62 /* NSNumber+HBUtils.h in Headers */,
 				AD6EC471235D3A4100F3AC62 /* NSObject+HBUtils.h in Headers */,
+				AD9529AE2366A316000D8195 /* HBAdRewardProtocol.h in Headers */,
 				AD6EC47C235D3A4100F3AC62 /* NSDate+HBUtils.h in Headers */,
+				AD891C9723692BEB005F60AE /* NSError+HBUtils.h in Headers */,
 				AD6EC487235D3A4100F3AC62 /* UITextView+HBUtils.h in Headers */,
 				AD6EC51C235D48DD00F3AC62 /* FEMAttribute.h in Headers */,
 				AD6EC53C235D48DD00F3AC62 /* NSObject+FEMKVCExtension.h in Headers */,
 				ADCEB67A2359A28700794BE5 /* HBUtilsBaseCVC.h in Headers */,
+				AD9529AF2366A316000D8195 /* HBGoogleAdReward.h in Headers */,
 				AD6EC53F235D48DD00F3AC62 /* FEMTypeIntrospection.h in Headers */,
+				AD9529A023668CBC000D8195 /* HBUtilities.h in Headers */,
 				ADCEB67E2359A2F000794BE5 /* HBUtilsBaseVC.h in Headers */,
 				AD6EC53E235D48DD00F3AC62 /* FEMTypes.h in Headers */,
 				AD6EC485235D3A4100F3AC62 /* UICollectionView+HBUtils.h in Headers */,
@@ -541,6 +651,8 @@
 				AD6EC525235D48DD00F3AC62 /* FEMManagedObjectMapping.h in Headers */,
 				AD6EC52C235D48DD00F3AC62 /* FEMManagedObjectDeserializer.h in Headers */,
 				AD6EC531235D48DD00F3AC62 /* FEMAssignmentPolicy.h in Headers */,
+				AD891CA123692FF6005F60AE /* HBUtiliyAPIManager.h in Headers */,
+				AD891C9A23692BEB005F60AE /* NSURLSessionTask+HBUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD80D9D9235368020069D78D /* hbutils.podspec in Resources */,
+				AD891C8B236927CC005F60AE /* SIAlertView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,17 +752,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6EC53A235D48DD00F3AC62 /* NSObject+FEMKVCExtension.m in Sources */,
+				AD891C9923692BEB005F60AE /* NSError+HBUtils.m in Sources */,
+				AD95299D23668BC9000D8195 /* UIViewController+HBUtils.m in Sources */,
 				AD6EC527235D48DD00F3AC62 /* FEMManagedObjectMapping.m in Sources */,
 				ADEEA01E2353706E00A91757 /* EXTScope.m in Sources */,
+				AD891C8E236927CC005F60AE /* UIWindow+SIUtils.m in Sources */,
 				AD6EC46D235D3A4100F3AC62 /* NSAttributedString+HBUtils.m in Sources */,
 				AD6EC47D235D3A4100F3AC62 /* UIView+HBUtils.m in Sources */,
 				AD6EC526235D48DD00F3AC62 /* FEMObjectMapping.m in Sources */,
 				ADCEB67B2359A28700794BE5 /* HBUtilsBaseCVC.m in Sources */,
 				AD6EC475235D3A4100F3AC62 /* UITextView+HBUtils.m in Sources */,
 				AD6EC52A235D48DD00F3AC62 /* FEMManagedObjectDeserializer.m in Sources */,
+				AD9529AC2366A316000D8195 /* HBGoogleAdReward.m in Sources */,
+				AD891C83236925AE005F60AE /* HBUtilities+Alert.m in Sources */,
 				AD6EC473235D3A4100F3AC62 /* NSNumber+HBUtils.m in Sources */,
 				AD6EC478235D3A4100F3AC62 /* UIImage+HBUtils.m in Sources */,
 				AD6EC520235D48DD00F3AC62 /* FEMMapping.m in Sources */,
+				AD9529A123668CBC000D8195 /* HBUtilities.m in Sources */,
 				AD6EC52D235D48DD00F3AC62 /* FEMSerializer.m in Sources */,
 				AD6EC468235D3A4100F3AC62 /* HBUtilsMacros.m in Sources */,
 				AD6EC47B235D3A4100F3AC62 /* NSObject+HBUtils.m in Sources */,
@@ -661,14 +780,18 @@
 				AD6EC530235D48DD00F3AC62 /* FEMCache.m in Sources */,
 				AD6EC533235D48DD00F3AC62 /* FEMAssignmentPolicyMetadata.m in Sources */,
 				AD6EC477235D3A4100F3AC62 /* UICollectionView+HBUtils.m in Sources */,
+				AD891C8A236927CC005F60AE /* SIAlertView.m in Sources */,
 				AD6EC443235D38D000F3AC62 /* HBUtilsBaseManagedObject.m in Sources */,
 				AD6EC46C235D3A4100F3AC62 /* UITableView+HBUtils.m in Sources */,
 				AD6EC46E235D3A4100F3AC62 /* NSArray+HBUtils.m in Sources */,
 				AD6EC52B235D48DD00F3AC62 /* FEMObjectDeserializer.m in Sources */,
+				AD9529AD2366A316000D8195 /* HBAdRewardProvider.m in Sources */,
 				AD6EC470235D3A4100F3AC62 /* NSDate+HBUtils.m in Sources */,
 				AD6EC476235D3A4100F3AC62 /* NSString+HBUtils.m in Sources */,
 				AD6EC481235D3A4100F3AC62 /* UIButton+HBUtils.m in Sources */,
 				AD6EC522235D48DD00F3AC62 /* FEMRelationship.m in Sources */,
+				AD891C9823692BEB005F60AE /* NSURLSessionTask+HBUtils.m in Sources */,
+				AD9529B02366A316000D8195 /* HBBaseRewardVideo.m in Sources */,
 				AD6EC46B235D3A4100F3AC62 /* UITextField+HBUtils.m in Sources */,
 				ADCEB6772359A1ED00794BE5 /* HBUtilsBaseCell.m in Sources */,
 				AD6EC537235D48DD00F3AC62 /* FEMMergeableCollection.m in Sources */,
@@ -676,6 +799,7 @@
 				AD6EC472235D3A4100F3AC62 /* UILabel+HBUtils.m in Sources */,
 				ADCEB67F2359A2F000794BE5 /* HBUtilsBaseVC.m in Sources */,
 				AD6EC540235D48DD00F3AC62 /* FEMTypeIntrospection.m in Sources */,
+				AD891CA223692FF6005F60AE /* HBUtiliyAPIManager.m in Sources */,
 				AD6EC534235D48DD00F3AC62 /* FEMAssignmentPolicy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -806,11 +930,17 @@
 			baseConfigurationReference = 085D8A1E761EA5398EC14921 /* Pods-HBUtils.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VendoredFrameworks",
+				);
 				INFOPLIST_FILE = HBUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -821,6 +951,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HB.HBUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -831,11 +962,17 @@
 			baseConfigurationReference = 9480253D6B42A85A50E0CE0C /* Pods-HBUtils.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VendoredFrameworks",
+				);
 				INFOPLIST_FILE = HBUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -846,6 +983,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HB.HBUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

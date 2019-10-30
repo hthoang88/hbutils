@@ -114,9 +114,19 @@ spec.subspec 'Others' do |ss|
     ss.ios.source_files = 'Classes/Others/*.{h,m}'
 end
 
-spec.subspec 'FastEasyMapping' do |ss|
+spec.subspec 'AdReward' do |ss|
     ss.platform = :ios, '9.0'
-    ss.ios.source_files = "Classes/FastEasyMapping/**/*.{h,m}", "Classes/FastEasyMapping/*.{h,m}"
+ss.ios.source_files = "Classes/AdReward/*.{h,m}", "Classes/AdReward/GoogleMobileAds.framework"
+end
+
+spec.subspec 'SIAlertView' do |ss|
+ss.platform = :ios, '9.0'
+ss.ios.source_files = "Classes/SIAlertView/*.{h,m}"
+end
+
+spec.subspec 'FastEasyMapping' do |ss|
+ss.platform = :ios, '9.0'
+ss.ios.source_files = "Classes/FastEasyMapping/**/*.{h,m}"
 end
 
 
@@ -133,7 +143,7 @@ end
   #  non-essential files like tests, examples and documentation.
   #
 
-  # spec.resource  = "icon.png"
+  spec.resource  = "Classes/SIAlertView/*.bundle"
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -145,7 +155,9 @@ end
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "SomeFramework"
+  spec.vendored_frameworks = 'GoogleMobileAds'
+  spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => 'HBUtils/VendoredFrameworks' }
+  spec.framework  = "GoogleMobileAds"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
@@ -163,4 +175,11 @@ end
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
     spec.dependency 'MagicalRecord'
+    spec.dependency 'PureLayout'
+    spec.dependency 'AFNetworking', '3.1.0'
+    spec.dependency 'MZFormSheetPresentationController', '~> 2.4.2'
+    spec.dependency 'MBProgressHUD', '~> 0.9.1'
+    spec.dependency 'SDWebImage'
+    spec.dependency 'UIActivityIndicator-for-SDWebImage'
+    spec.dependency 'UIScrollView-InfiniteScroll'
 end

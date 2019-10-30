@@ -1,0 +1,21 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.0'
+
+target "HBUtils" do
+    use_frameworks!
+    inhibit_all_warnings!
+    pod 'MagicalRecord'
+    pod 'MZFormSheetPresentationController', '~> 2.4.2'
+    pod 'PureLayout'
+    pod 'AFNetworking', '3.1.0'
+    
+    # Workaround for Cocoapods issue #7606
+    post_install do |installer|
+        installer.pods_project.build_configurations.each do |config|
+            config.build_settings.delete('CODE_SIGNING_ALLOWED')
+            config.build_settings.delete('CODE_SIGNING_REQUIRED')
+        end
+    end
+end

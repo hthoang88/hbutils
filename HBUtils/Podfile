@@ -11,6 +11,10 @@ target "HBUtils" do
     pod 'PureLayout'
     pod 'AFNetworking', '3.1.0'
     
+    pod 'Firebase'
+    pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :tag => '4.11.0'
+    pod 'FirebaseDatabase', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :tag => '4.11.0'
+    
     # Workaround for Cocoapods issue #7606
     post_install do |installer|
         installer.pods_project.build_configurations.each do |config|

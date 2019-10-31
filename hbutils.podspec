@@ -129,6 +129,10 @@ ss.platform = :ios, '9.0'
 ss.ios.source_files = "Classes/FastEasyMapping/**/*.{h,m}"
 end
 
+spec.subspec 'FirebaseHelper' do |ss|
+ss.platform = :ios, '9.0'
+ss.ios.source_files = "Classes/FirebaseHelper/**/*.{h,m}"
+end
 
   # spec.source_files  = "Classes", "Classes/*.{h,m}", "Classes/*/*.{h,m}"
 
@@ -182,4 +186,5 @@ end
     spec.dependency 'SDWebImage'
     spec.dependency 'UIActivityIndicator-for-SDWebImage'
     spec.dependency 'UIScrollView-InfiniteScroll'
+    spec.dependency 'WYPopoverController'
 end

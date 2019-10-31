@@ -27,11 +27,25 @@
     return sharedManager;
 }
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.admodConfig = [HBAdRewardConfig new];
+    }
+    return self;
+}
+
 - (void)updateRewardVideoCount:(NSInteger)value
 {
     if (self.isShowingRewardVideo) {
         DLog(@"Dont update reward count because ads is showing!");
         //Don's update reward count if ads is showing
+        return;
+    }
+    BOOL shouldUpdateRewardCount = true;
+    if ([self valueForKey:@"AD_PROVIDER_shouldUpdateRewardCount"]) {
+        shouldUpdateRewardCount = [[self valueForKey:@"AD_PROVIDER_shouldUpdateRewardCount"] boolValue];
+    }
+    if (!shouldUpdateRewardCount) {
         return;
     }
     USER_DEFAULT_UPDATE(key_RewardVideoFullCount, value, false);
@@ -190,9 +204,8 @@
     return @"key_requireViewReward";
 }
 
-
 - (NSString*)key_adClickMsg {
-    return @"key_requireViewReward";
+    return @"key_adClickMsg";
 }
 
 - (NSString*)key_timeToShowFullAd {

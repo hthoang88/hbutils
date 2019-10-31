@@ -203,3 +203,117 @@ static char TAG_TAP_GESTURE_ACTION;
 }
 
 @end
+
+@implementation UIView (HUD)
+
+- (HBProgressHUD*)showHUD
+{
+    return [self showHUD:nil];
+}
+
+- (BOOL)canShowHub
+{
+    return YES;
+}
+
+- (HBProgressHUD*)showHUD:(NSString*)title
+{
+    return [self showHUD:title lockUI:YES];
+}
+
+- (HBProgressHUD*)showHUD:(NSString*)title lockUI:(BOOL)lockUI
+{
+    HBProgressHUD*hud = [HBProgressHUD showHUDAddedTo:self
+                                              animated:NO];
+    hud.userInteractionEnabled = lockUI;
+    if(title){
+        hud.labelText = title;
+    }
+    return hud;
+}
+
+- (HBProgressHUD*)showSmartHUD
+{
+    return [self showHUD:nil lockUI:NO];
+}
+
+- (HBProgressHUD*)showHUDHubWithText:(NSString*)text hideAfterSecond:(NSInteger)delayTimeToHide completion:(void(^)(void))completion
+{
+    HBProgressHUD*hud = [HBProgressHUD showHUDAddedTo:self
+                                              animated:NO];
+    hud.labelText = text;
+    [hud hide:YES afterDelay:delayTimeToHide];
+    [hud setCompletionBlock:^{
+        // back to main view
+        if (completion) {
+            completion();
+        }
+    }];
+    return hud;
+}
+
+- (HBProgressHUD*)showHUDText:(NSString*)text hideAfterSecond:(NSInteger)delayTimeToHide completion:(void(^)(void))completion
+{
+    HBProgressHUD*hud = [HBProgressHUD showHUDAddedTo:self
+                                              animated:NO];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = text;
+    [hud hide:YES afterDelay:delayTimeToHide];
+    [hud setCompletionBlock:^{
+        // back to main view
+        if (completion) {
+            completion();
+        }
+    }];
+    return hud;
+}
+
+- (HBProgressHUD*)showHUDCustomWithText:(NSString*)text image:(UIImage*)image hideAfterSecond:(NSInteger)delayTimeToHide completion:(void(^)(void))completion
+{
+    HBProgressHUD*hud = [HBProgressHUD showHUDAddedTo:self
+                                              animated:NO];
+    hud.mode = MBProgressHUDModeCustomView;
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 37, 37)];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.image = image;
+    hud.customView = imageView;
+    hud.labelText = text;
+    [hud hide:YES afterDelay:delayTimeToHide];
+    [hud setCompletionBlock:^{
+        // back to main view
+        if (completion) {
+            completion();
+        }
+    }];
+    return hud;
+}
+
+
+- (void)hideHUD
+{
+    [HBProgressHUD hideAllHUDsForView:self
+                             animated:NO];
+}
+@end
+
+@implementation HBProgressHUD
+
++ (MB_INSTANCETYPE)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
+    HBProgressHUD *instance = (id)[view viewWithTag:1122334];
+    if (instance && [instance isKindOfClass:[MBProgressHUD class]]) {
+        [instance removeFromSuperview];
+    }
+    HBProgressHUD *hud = [[self alloc] initWithView:view];
+    hud.removeFromSuperViewOnHide = YES;
+    hud.tag = 1122334;
+    UILabel *label = [hud valueForKey:@"label"];
+    if (label) {
+        label.numberOfLines = 0;
+    }
+    [view addSubview:hud];
+    [hud show:animated];
+    
+    return hud;
+}
+
+@end

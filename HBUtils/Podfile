@@ -10,10 +10,11 @@ target "HBUtils" do
     pod 'MZFormSheetPresentationController', '~> 2.4.2'
     pod 'PureLayout'
     pod 'AFNetworking', '3.1.0'
+    pod 'MBProgressHUD', '~> 0.9.1'
     
     pod 'Firebase'
-    pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :tag => '4.11.0'
-    pod 'FirebaseDatabase', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :tag => '4.11.0'
+    pod 'FirebaseCore'
+    pod 'FirebaseDatabase'
     
     # Workaround for Cocoapods issue #7606
     post_install do |installer|

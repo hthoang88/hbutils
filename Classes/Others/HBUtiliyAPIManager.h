@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)changeUserAgent:(NSString *_Nullable)userAgent;
 
-void LOG_API_DEBUG(NSURLSessionDataTask *operation, NSDictionary *params, id responseObject, NSError* error);
+void LOG_API_DEBUG(NSURLSessionDataTask *operation, NSDictionary *params, id _Nullable  responseObject, NSError* _Nullable error);
 @end
 
 NS_ASSUME_NONNULL_END

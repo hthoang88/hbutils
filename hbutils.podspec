@@ -187,4 +187,8 @@ end
     spec.dependency 'UIActivityIndicator-for-SDWebImage'
     spec.dependency 'UIScrollView-InfiniteScroll'
     spec.dependency 'WYPopoverController'
+    spec.dependency 'iRate'
+    spec.dependency 'Firebase'
+    spec.dependency 'FirebaseCore'
+    spec.dependency 'FirebaseDatabase'
 end

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MBProgressHUD;
+@class HBProgressHUD;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UILongPressGestureRecognizer*)addLongGestureAction:(void(^)(UIView *btn))action;
 
 - (void)border:(UIColor* _Nullable)color
-          width:(CGFloat)borderWidth
+         width:(CGFloat)borderWidth
         radius:(CGFloat)radius;
 
 @property (nonatomic) CGPoint frameOrigin;
@@ -38,6 +40,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)containsSubView:(UIView *)subView;
 - (BOOL)containsSubViewOfClassType:(Class)class;
 - (id)subViewWithClass:(Class)cl;
+
+@end
+
+@interface UIView (HUD)
+//HUD
+- (HBProgressHUD*)showHUD;
+- (HBProgressHUD*)showHUD:(NSString* _Nullable)title;
+- (HBProgressHUD*)showHUD:(NSString* _Nullable)title lockUI:(BOOL)lockUI;
+- (HBProgressHUD*)showSmartHUD;
+- (void)hideHUD;
+- (HBProgressHUD*)showHUDHubWithText:(NSString*_Nullable)text hideAfterSecond:(NSInteger)delayTimeToHide completion:(void(^ _Nullable)(void))completion;
+- (HBProgressHUD*)showHUDText:(NSString*_Nullable)text hideAfterSecond:(NSInteger)delayTimeToHide completion:(void(^ _Nullable)(void))completion;
+- (HBProgressHUD*)showHUDCustomWithText:(NSString*_Nullable)text image:(UIImage*_Nullable)image hideAfterSecond:(NSInteger)delayTimeToHide completion:(void(^)(void))completion;
+@end
+
+@interface HBProgressHUD : MBProgressHUD
 
 @end
 

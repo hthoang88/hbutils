@@ -98,8 +98,6 @@
 		AD891CA123692FF6005F60AE /* HBUtiliyAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AD891C9F23692FF5005F60AE /* HBUtiliyAPIManager.h */; };
 		AD891CA223692FF6005F60AE /* HBUtiliyAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD891CA023692FF5005F60AE /* HBUtiliyAPIManager.m */; };
 		AD8D6785236A899700DA954D /* HBUtils-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = AD8D6784236A899700DA954D /* HBUtils-Bridging-Header.h */; };
-		AD8D6789236A8BA400DA954D /* HBUtilsFirebaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8D6787236A8BA400DA954D /* HBUtilsFirebaseHelper.m */; };
-		AD8D678A236A8BA400DA954D /* HBUtilsFirebaseHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AD8D6788236A8BA400DA954D /* HBUtilsFirebaseHelper.h */; };
 		AD95299C23668BC9000D8195 /* UIViewController+HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD95299A23668BC9000D8195 /* UIViewController+HBUtils.h */; };
 		AD95299D23668BC9000D8195 /* UIViewController+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */; };
 		AD9529A023668CBC000D8195 /* HBUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AD95299E23668CBC000D8195 /* HBUtilities.h */; };
@@ -221,8 +219,6 @@
 		AD891C9F23692FF5005F60AE /* HBUtiliyAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBUtiliyAPIManager.h; sourceTree = "<group>"; };
 		AD891CA023692FF5005F60AE /* HBUtiliyAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBUtiliyAPIManager.m; sourceTree = "<group>"; };
 		AD8D6784236A899700DA954D /* HBUtils-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HBUtils-Bridging-Header.h"; sourceTree = "<group>"; };
-		AD8D6787236A8BA400DA954D /* HBUtilsFirebaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBUtilsFirebaseHelper.m; sourceTree = "<group>"; };
-		AD8D6788236A8BA400DA954D /* HBUtilsFirebaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBUtilsFirebaseHelper.h; sourceTree = "<group>"; };
 		AD95299A23668BC9000D8195 /* UIViewController+HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HBUtils.h"; sourceTree = "<group>"; };
 		AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HBUtils.m"; sourceTree = "<group>"; };
 		AD95299E23668CBC000D8195 /* HBUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilities.h; sourceTree = "<group>"; };
@@ -520,7 +516,6 @@
 		AD80D9CB23535EB60069D78D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AD8D6786236A8BA400DA954D /* FirebaseHelper */,
 				AD891C84236927CC005F60AE /* SIAlertView */,
 				AD9529A22366A316000D8195 /* AdReward */,
 				AD6EC4E5235D48DC00F3AC62 /* FastEasyMapping */,
@@ -543,15 +538,6 @@
 				AD891C89236927CC005F60AE /* UIWindow+SIUtils.m */,
 			);
 			path = SIAlertView;
-			sourceTree = "<group>";
-		};
-		AD8D6786236A8BA400DA954D /* FirebaseHelper */ = {
-			isa = PBXGroup;
-			children = (
-				AD8D6788236A8BA400DA954D /* HBUtilsFirebaseHelper.h */,
-				AD8D6787236A8BA400DA954D /* HBUtilsFirebaseHelper.m */,
-			);
-			path = FirebaseHelper;
 			sourceTree = "<group>";
 		};
 		AD9529A22366A316000D8195 /* AdReward */ = {
@@ -635,7 +621,6 @@
 				AD6EC51D235D48DD00F3AC62 /* FEMAttribute+Extension.h in Headers */,
 				AD6EC483235D3A4100F3AC62 /* UILabel+HBUtils.h in Headers */,
 				AD6EC528235D48DD00F3AC62 /* FEMMapping.h in Headers */,
-				AD8D678A236A8BA400DA954D /* HBUtilsFirebaseHelper.h in Headers */,
 				AD6EC521235D48DD00F3AC62 /* FEMRelationshipMapping.h in Headers */,
 				ADEEA01D2353706E00A91757 /* metamacros.h in Headers */,
 				AD95299C23668BC9000D8195 /* UIViewController+HBUtils.h in Headers */,
@@ -774,7 +759,6 @@
 				AD891C9923692BEB005F60AE /* NSError+HBUtils.m in Sources */,
 				AD95299D23668BC9000D8195 /* UIViewController+HBUtils.m in Sources */,
 				AD6EC527235D48DD00F3AC62 /* FEMManagedObjectMapping.m in Sources */,
-				AD8D6789236A8BA400DA954D /* HBUtilsFirebaseHelper.m in Sources */,
 				ADEEA01E2353706E00A91757 /* EXTScope.m in Sources */,
 				AD891C8E236927CC005F60AE /* UIWindow+SIUtils.m in Sources */,
 				AD6EC46D235D3A4100F3AC62 /* NSAttributedString+HBUtils.m in Sources */,

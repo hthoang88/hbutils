@@ -42,8 +42,8 @@
         return;
     }
     BOOL shouldUpdateRewardCount = true;
-    if ([self valueForKey:@"AD_PROVIDER_shouldUpdateRewardCount"]) {
-        shouldUpdateRewardCount = [[self valueForKey:@"AD_PROVIDER_shouldUpdateRewardCount"] boolValue];
+    if ([self valueWith:@"AD_PROVIDER_shouldUpdateRewardCount"]) {
+        shouldUpdateRewardCount = [[self valueWith:@"AD_PROVIDER_shouldUpdateRewardCount"] boolValue];
     }
     if (!shouldUpdateRewardCount) {
         return;
@@ -239,7 +239,7 @@
 
 
 - (NSString*)key_preferredStatusBarStyle {
-    return @"key_volumeView";
+    return @"key_preferredStatusBarStyle";
 }
 
 - (NSString*)key_window{

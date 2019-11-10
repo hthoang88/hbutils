@@ -10,6 +10,7 @@
 #import "HBUtilsMacros.h"
 #import "HBAdRewardProvider.h"
 #import "UIView+HBUtils.h"
+#import "UIView+HBUtils.h"
 @import GoogleMobileAds;
 @import AVFoundation;
 
@@ -82,14 +83,33 @@
     
     UIViewController *rootVC = [self currentRootVC];
     
-    if (!self.shouldShowFullAds) {
-        [self showSheetCompletion:^(UIViewController *contentViewController) {
-            [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:contentViewController];
+    NSString *str = [AD_PROVIDER valueWith:AD_PROVIDER.key_warningAdAppear];
+    UIWindow *window = [AD_PROVIDER valueWith:AD_PROVIDER.key_window];
+    if (str.length > 0 &&
+        window) {
+        HBProgressHUD* hub = [window showHUDText:str hideAfterSecond:2.0 completion:^{
+            if (!self.shouldShowFullAds) {
+                [self showSheetCompletion:^(UIViewController *contentViewController) {
+                    [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:contentViewController];
+                }];
+            }else {
+                if (rootVC.view.window) {
+                    AD_PROVIDER.isShowingRewardVideo = true;
+                    [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:rootVC];
+                }
+            }
         }];
+        hub.labelFont = FONT_REGULAR(12);
     }else {
-        if (rootVC.view.window) {
-            AD_PROVIDER.isShowingRewardVideo = true;
-            [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:rootVC];
+        if (!self.shouldShowFullAds) {
+            [self showSheetCompletion:^(UIViewController *contentViewController) {
+                [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:contentViewController];
+            }];
+        }else {
+            if (rootVC.view.window) {
+                AD_PROVIDER.isShowingRewardVideo = true;
+                [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:rootVC];
+            }
         }
     }
 }

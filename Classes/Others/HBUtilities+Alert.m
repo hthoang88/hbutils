@@ -55,8 +55,6 @@ void HANDLE_ERROR(NSError* _Nullable err) {
             }else{
                 ALERT(DefaultErrorAlertTitle, DefaultErrorMessage);
             }
-            
-            ALERT(@"Error", err.description);
         }
     }
 }

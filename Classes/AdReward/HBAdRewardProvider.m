@@ -151,9 +151,9 @@
     lbl.minimumScaleFactor = 0.5;
     [v addSubview:lbl];
     if (HAS_NOTCH_HEADER()) {
-        [lbl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(20, 5, 5, 5)];
+        [lbl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(30, 5, 5, 5)];
     }else {
-        [lbl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+        [lbl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(20, 5, 5, 5)];
     }
     
     USER_DEFAULT_SET(key_RewardVideoFullCount, 0, true);
@@ -249,6 +249,9 @@
     return @"key_rootVC";
 }
 
+- (NSString*)key_warningAdAppear {
+    return @"key_warningAdAppear";
+}
 - (id)valueWith:(NSString*)key {
     return self.valueBlock(self, key, nil);
 }

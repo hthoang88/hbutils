@@ -66,6 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)key_preferredStatusBarStyle;
 - (NSString*)key_window;
 - (NSString*)key_rootVC;
+- (NSString*)key_warningAdAppear;
 
 - (id)valueWith:(NSString*)key;
 @end

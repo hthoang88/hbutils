@@ -116,7 +116,7 @@ end
 
 spec.subspec 'AdReward' do |ss|
     ss.platform = :ios, '9.0'
-ss.ios.source_files = "Classes/AdReward/*.{h,m}", "Classes/AdReward/GoogleMobileAds.framework"
+ss.ios.source_files = "Classes/AdReward/*.{h,m}"
 end
 
 spec.subspec 'SIAlertView' do |ss|
@@ -154,9 +154,9 @@ end
   #  the lib prefix of their name.
   #
 
-  spec.vendored_frameworks = 'GoogleMobileAds'
-  spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => 'HBUtils/VendoredFrameworks' }
-  spec.framework  = "GoogleMobileAds"
+  # spec.vendored_frameworks = 'GoogleMobileAds'
+  # spec.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => 'HBUtils/VendoredFrameworks' }
+  # spec.framework  = "GoogleMobileAds"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"

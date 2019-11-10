@@ -15,6 +15,6 @@
 }
 
 - (void)addNotification:(SEL)selector name:(NSString*)name {
-    
+    [NTF_CENTER addObserver:self selector:selector name:name object:nil];
 }
 @end

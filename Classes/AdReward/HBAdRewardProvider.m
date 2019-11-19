@@ -56,7 +56,7 @@
         HBAdRewardType type = [self rewardTypeForCurrentContext];
         id<HBAdRewardProtocol> reward = [self reward:type];
         DISPATCH_ASYNC_AFTER(1.5, ^{
-            [reward loadAd];            
+            [reward loadAd];
         });
     }else {
         USER_DEFAULT_UPDATE(key_RewardVideoCount, value, false);
@@ -68,6 +68,11 @@
     if (AD_PROVIDER.admodConfig.googleAdEnable.boolValue) {
         return HBAdRewardTypeGoogle;
     }
+    id val = [self valueWith:self.key_adRewardType];
+    if (val) {
+        return [val intValue];
+    }
+    
     
     return HBAdRewardTypeUnknown;
 }
@@ -107,21 +112,13 @@
     if (type == HBAdRewardTypeGoogle) {
         className = @"HBGoogleAdReward";
     }
-//    else if (type == HBAdRewardTypeMopub) {
-//        className = @"HBMopubAdReward";
-//    }
-//    else if (type == HBAdRewardTypeAdColony) {
-//        className = @"HBAdColonyAdReward";
-//    }
-//    else if (type == HBAdRewardTypeStartApp) {
-//        className = @"HBStartAppReward";
-//    }
-//    else if (type == HBAdRewardTypeStartApp) {
-//        className = @"HBStartAppReward";
-//    }
-//    else if (type == HBAdRewardTypeVungle) {
-//        className = @"HBVungleRewardVideo";
-//    }
+    else {
+        id val = [self valueWith:self.key_adClassName];
+        if (val) {
+            className = val;
+        }
+    }
+    
     if (className) {
         return (id)([NSClassFromString(className) shared]);
     }
@@ -251,6 +248,14 @@
 
 - (NSString*)key_warningAdAppear {
     return @"key_warningAdAppear";
+}
+
+- (NSString*)key_adClassName {
+    return @"key_adClassName";
+}
+
+- (NSString*)key_adRewardType {
+    return @"key_adRewardType";
 }
 - (id)valueWith:(NSString*)key {
     return self.valueBlock(self, key, nil);

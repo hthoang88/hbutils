@@ -19,8 +19,6 @@
 #define kClearColor                 [UIColor clearColor]
 #define kLightGrayColor             [UIColor lightGrayColor]
 #define kDarkColor                  [UIColor darkGrayColor]
-#define kUnFavoriteColor            [UIColor lightGrayColor]
-#define kFavoriteColor              kTintColor
 
 #define RGBCOLOR(r, g, b)             [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define RGBCOLOR_SAME(v)             [UIColor colorWithRed:(v)/255.0f green:(v)/255.0f blue:(v)/255.0f alpha:1]

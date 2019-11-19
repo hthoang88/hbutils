@@ -67,6 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)key_window;
 - (NSString*)key_rootVC;
 - (NSString*)key_warningAdAppear;
+- (NSString*)key_adClassName;
+- (NSString*)key_adRewardType;
 
 - (id)valueWith:(NSString*)key;
 @end

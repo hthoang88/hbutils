@@ -10,7 +10,6 @@
 #import "HBUtilsMacros.h"
 #import "HBAdRewardProvider.h"
 #import "UIView+HBUtils.h"
-#import "UIView+HBUtils.h"
 @import GoogleMobileAds;
 @import AVFoundation;
 
@@ -44,10 +43,6 @@
 }
 
 - (void)loadAd {
-//    if (IAP_MANAGER.isPurchased) {
-//        return;
-//    }
-    
     [GADRewardBasedVideoAd sharedInstance].delegate = self;
     if (AD_PROVIDER.isShowingRewardVideo) {
         return;

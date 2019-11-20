@@ -112,6 +112,9 @@
     if (type == HBAdRewardTypeGoogle) {
         className = @"HBGoogleAdReward";
     }
+    else if (type == HBAdRewardTypeVungle) {
+        className = @"HBVungleRewardVideo";
+    }
     else {
         id val = [self valueWith:self.key_adClassName];
         if (val) {
@@ -185,6 +188,7 @@
 
 
 @implementation HBAdRewardProvider (Config)
+#pragma mark - Google Ads
 - (NSString*)key_googleAdAppId {
     return @"key_googleAdAppId";
 }
@@ -197,12 +201,22 @@
     return @"key_googleAdEnable";
 }
 
-- (NSString*)key_requireViewReward {
-    return @"key_requireViewReward";
+#pragma mark - Google Ads
+- (NSString*)key_vungLeAdAppId {
+    return @"key_vungLeAdAppId";
 }
 
-- (NSString*)key_adClickMsg {
-    return @"key_adClickMsg";
+- (NSString*)key_vungLeAdRewardId {
+    return @"key_vungLeAdRewardId";
+}
+
+- (NSString*)key_vungLeAdEnable {
+    return @"key_vungLeAdEnable";
+}
+
+#pragma mark - Time
+- (NSString*)key_timeToShowRewardVideo {
+    return @"key_timeToShowRewardVideo";
 }
 
 - (NSString*)key_timeToShowFullAd {
@@ -213,14 +227,19 @@
     return @"key_timeToShowFullAd";
 }
 
-- (NSString*)key_timeToShowRewardVideo {
-    return @"key_timeToShowRewardVideo";
-}
-
-
 - (NSString*)key_timeToDelayCloseAd {
     return @"key_timeToDelayCloseAd";
 }
+
+#pragma mark - Enable/Disable
+- (NSString*)key_adClickMsg {
+    return @"key_adClickMsg";
+}
+
+- (NSString*)key_requireViewReward {
+    return @"key_requireViewReward";
+}
+
 
 - (NSString*)key_enableMuteAdSound {
     return @"key_enableMuteAdSound";
@@ -230,10 +249,10 @@
     return @"key_enableMagicRewardVideo";
 }
 
+#pragma mark - Additional
 - (NSString*)key_volumeView {
     return @"key_volumeView";
 }
-
 
 - (NSString*)key_preferredStatusBarStyle {
     return @"key_preferredStatusBarStyle";
@@ -257,6 +276,7 @@
 - (NSString*)key_adRewardType {
     return @"key_adRewardType";
 }
+
 - (id)valueWith:(NSString*)key {
     return self.valueBlock(self, key, nil);
 }
@@ -264,6 +284,7 @@
 @end
 
 @implementation HBAdRewardConfig
+#pragma mark - Google Ads
 - (NSString *)googleAdAppId {
     return [AD_PROVIDER valueWith:AD_PROVIDER.key_googleAdAppId];
 }
@@ -275,7 +296,20 @@
 - (NSNumber *)googleAdEnable {
     return [AD_PROVIDER valueWith:AD_PROVIDER.key_googleAdEnable];
 }
+#pragma mark - VungLe Ads
+- (NSString *)vungleAppId {
+    return [AD_PROVIDER valueWith:AD_PROVIDER.key_vungLeAdAppId];
+}
 
+- (NSString *)vungLeAdRewardId {
+    return [AD_PROVIDER valueWith:AD_PROVIDER.key_vungLeAdRewardId];
+}
+
+- (NSNumber *)vungleEnable {
+    return [AD_PROVIDER valueWith:AD_PROVIDER.key_vungLeAdEnable];
+}
+
+#pragma mark - Others
 - (NSNumber *)requireViewReward{
     return [AD_PROVIDER valueWith:AD_PROVIDER.key_requireViewReward];
 }

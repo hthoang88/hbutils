@@ -119,6 +119,8 @@
 		ADCEB67B2359A28700794BE5 /* HBUtilsBaseCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCEB6792359A28700794BE5 /* HBUtilsBaseCVC.m */; };
 		ADCEB67E2359A2F000794BE5 /* HBUtilsBaseVC.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCEB67C2359A2F000794BE5 /* HBUtilsBaseVC.h */; };
 		ADCEB67F2359A2F000794BE5 /* HBUtilsBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCEB67D2359A2F000794BE5 /* HBUtilsBaseVC.m */; };
+		ADDEE4FF2384F5FD00C8C42A /* HBVungleRewardVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDEE4FD2384F5FD00C8C42A /* HBVungleRewardVideo.h */; };
+		ADDEE5002384F5FD00C8C42A /* HBVungleRewardVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDEE4FE2384F5FD00C8C42A /* HBVungleRewardVideo.m */; };
 		ADEEA01C2353706E00A91757 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA0172353706E00A91757 /* EXTRuntimeExtensions.h */; };
 		ADEEA01D2353706E00A91757 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEEA0182353706E00A91757 /* metamacros.h */; };
 		ADEEA01E2353706E00A91757 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEEA0192353706E00A91757 /* EXTScope.m */; };
@@ -244,6 +246,8 @@
 		ADCEB6792359A28700794BE5 /* HBUtilsBaseCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilsBaseCVC.m; sourceTree = "<group>"; };
 		ADCEB67C2359A2F000794BE5 /* HBUtilsBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseVC.h; sourceTree = "<group>"; };
 		ADCEB67D2359A2F000794BE5 /* HBUtilsBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilsBaseVC.m; sourceTree = "<group>"; };
+		ADDEE4FD2384F5FD00C8C42A /* HBVungleRewardVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBVungleRewardVideo.h; sourceTree = "<group>"; };
+		ADDEE4FE2384F5FD00C8C42A /* HBVungleRewardVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBVungleRewardVideo.m; sourceTree = "<group>"; };
 		ADEEA0172353706E00A91757 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		ADEEA0182353706E00A91757 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		ADEEA0192353706E00A91757 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 				AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */,
 				AD9529A82366A316000D8195 /* HBGoogleAdReward.h */,
 				AD9529A52366A316000D8195 /* HBGoogleAdReward.m */,
+				ADDEE4FD2384F5FD00C8C42A /* HBVungleRewardVideo.h */,
+				ADDEE4FE2384F5FD00C8C42A /* HBVungleRewardVideo.m */,
 			);
 			path = AdReward;
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				AD6EC484235D3A4100F3AC62 /* UIImage+HBUtils.h in Headers */,
 				AD891C8C236927CC005F60AE /* UIWindow+SIUtils.h in Headers */,
 				ADCEB6762359A1ED00794BE5 /* HBUtilsBaseCell.h in Headers */,
+				ADDEE4FF2384F5FD00C8C42A /* HBVungleRewardVideo.h in Headers */,
 				AD6EC52E235D48DD00F3AC62 /* FEMSerializer.h in Headers */,
 				AD6EC482235D3A4100F3AC62 /* NSNumber+HBUtils.h in Headers */,
 				AD8D6785236A899700DA954D /* HBUtils-Bridging-Header.h in Headers */,
@@ -807,6 +814,7 @@
 				AD3D1140237867B700EBF470 /* HBUtilsBaseFormSheetVC.m in Sources */,
 				AD6EC470235D3A4100F3AC62 /* NSDate+HBUtils.m in Sources */,
 				AD3D113C2378675B00EBF470 /* HBUtilsBaseView.m in Sources */,
+				ADDEE5002384F5FD00C8C42A /* HBVungleRewardVideo.m in Sources */,
 				AD6EC476235D3A4100F3AC62 /* NSString+HBUtils.m in Sources */,
 				AD6EC481235D3A4100F3AC62 /* UIButton+HBUtils.m in Sources */,
 				AD6EC522235D48DD00F3AC62 /* FEMRelationship.m in Sources */,

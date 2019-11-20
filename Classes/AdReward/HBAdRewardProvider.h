@@ -48,21 +48,29 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface HBAdRewardProvider (Config)
+//Google Ads
 - (NSString*)key_googleAdAppId;
 - (NSString*)key_googleAdRewardId;
 - (NSString*)key_googleAdEnable;
-- (NSString*)key_requireViewReward;
 
-- (NSString*)key_adClickMsg;
+//VungLe Ads
+- (NSString*)key_vungLeAdAppId;
+- (NSString*)key_vungLeAdRewardId;
+- (NSString*)key_vungLeAdEnable;
+
+//time
 - (NSString*)key_timeToShowFullAd;
 - (NSString*)key_rewardVideoMinimumTime;
 - (NSString*)key_timeToShowRewardVideo;
-
 - (NSString*)key_timeToDelayCloseAd;
+
+//Enable/Disable
+- (NSString*)key_adClickMsg;
+- (NSString*)key_requireViewReward;
 - (NSString*)key_enableMuteAdSound;
 - (NSString*)key_enableMagicRewardVideo;
-- (NSString*)key_volumeView;
 
+- (NSString*)key_volumeView;
 - (NSString*)key_preferredStatusBarStyle;
 - (NSString*)key_window;
 - (NSString*)key_rootVC;
@@ -77,8 +85,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *googleAdAppId;
 @property (strong, nonatomic) NSString *googleAdRewardId;
 @property (strong, nonatomic) NSNumber *googleAdEnable;
-@property (strong, nonatomic) NSNumber *requireViewReward;
 
+@property (strong, nonatomic) NSNumber *vungleEnable;
+@property (strong, nonatomic) NSString *vungleAppId;
+@property (strong, nonatomic) NSString *vungLeAdRewardId;
+
+@property (strong, nonatomic) NSNumber *requireViewReward;
 @property (strong, nonatomic) NSString *adClickMsg;
 @property (strong, nonatomic) NSNumber *timeToShowFullAd;
 @property (strong, nonatomic) NSNumber *rewardVideoMinimumTime;

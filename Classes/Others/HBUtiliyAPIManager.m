@@ -8,6 +8,9 @@
 
 #import "HBUtiliyAPIManager.h"
 #import "NSDictionary+HBUtils.h"
+#import "HBUtilsMacros.h"
+#import "NSError+HBUtils.h"
+#import "NSURLSessionTask+HBUtils.h"
 
 @implementation HBUtiliyAPIManager
 + (id)sharedInstance {
@@ -167,42 +170,50 @@
 
 void LOG_API_DEBUG(NSURLSessionDataTask *operation, NSDictionary *params, id responseObject, NSError* error)
 {
-    
-#if LOG_API_STATUS
-    NSString *line = @"";
-    for (int i = 0; i < 40; i++) {
-        line = [line stringByAppendingString:@"="];
+    BOOL LOG_API_STATUS = false;
+    BOOL LOG_API_REQUEST_PARAM = false;
+    BOOL LOG_API_RESPONSE = false;
+    if ([USER_DEFAULT objectForKey:@"LOG_API_STATUS"]) {
+        LOG_API_STATUS = [[USER_DEFAULT objectForKey:@"LOG_API_STATUS"] boolValue];
     }
-    NSString *requestKind = @"GET";
-    if ([operation isKindOfClass:NSURLSessionDataTask.class]) {
-        requestKind = operation.currentRequest.HTTPMethod;
+    if ([USER_DEFAULT objectForKey:@"LOG_API_REQUEST_PARAM"]) {
+        LOG_API_REQUEST_PARAM = [[USER_DEFAULT objectForKey:@"LOG_API_REQUEST_PARAM"] boolValue];
     }
-    NSString *urlStr = @"";
-    if ([operation isKindOfClass:NSURLSessionDataTask.class]) {
-        urlStr = [HBUtiliyAPIManager.sharedInstance urlStringWithRequest:operation.currentRequest];
-    } else if ([operation isKindOfClass:NSString.class]) {
-        urlStr = (id)operation;
+    if ([USER_DEFAULT objectForKey:@"LOG_API_RESPONSE"]) {
+        LOG_API_RESPONSE = [[USER_DEFAULT objectForKey:@"LOG_API_RESPONSE"] boolValue];
     }
-    if (error) {
-        if (![error isCancelError]) {
-            NSString *str = [NSString stringWithFormat:@"\n\n%@\n%@ API FAIL \n%@ - statusCode:%zd %@\n%@\n%@\n\n", line, requestKind, urlStr, operation.statusCode, params, [operation responseString:error], line];
-            
+    if (LOG_API_STATUS) {
+        NSString *line = @"";
+        for (int i = 0; i < 40; i++) {
+            line = [line stringByAppendingString:@"="];
+        }
+        NSString *requestKind = @"GET";
+        if ([operation isKindOfClass:NSURLSessionDataTask.class]) {
+            requestKind = operation.currentRequest.HTTPMethod;
+        }
+        NSString *urlStr = @"";
+        if ([operation isKindOfClass:NSURLSessionDataTask.class]) {
+            urlStr = [HBUtiliyAPIManager.sharedInstance urlStringWithRequest:operation.currentRequest];
+        } else if ([operation isKindOfClass:NSString.class]) {
+            urlStr = (id)operation;
+        }
+        if (error) {
+            if (![error isCancelError]) {
+                NSString *str = [NSString stringWithFormat:@"\n\n%@\n%@ API FAIL \n%@ - statusCode:%zd %@\n%@\n%@\n\n", line, requestKind, urlStr, operation.statusCode, params, [operation responseString:error], line];
+                
+                DLog(@"%@", str);
+            }
+        }else{
+            NSString *str = [NSString stringWithFormat:@"\n\n%@\n%@ API Success \n%@", line, requestKind, urlStr];
+            if (params && LOG_API_REQUEST_PARAM) {
+                str= [str stringByAppendingFormat:@"\n%@", params];
+            }
+            if (LOG_API_RESPONSE) {
+                str= [str stringByAppendingFormat:@"\n%@", responseObject];
+            }
             DLog(@"%@", str);
         }
-    }else{
-        NSString *str = [NSString stringWithFormat:@"\n\n%@\n%@ API Success \n%@", line, requestKind, urlStr];
-#if LOG_API_REQUEST_PARAM
-        if (params) {
-            str= [str stringByAppendingFormat:@"\n%@", params];
-        }
-#endif
-#if LOG_API_RESPONSE
-        str= [str stringByAppendingFormat:@"\n%@", responseObject];
-#endif
-        str= [str stringByAppendingFormat:@"\n%@\n", line];
-        DLog(@"%@", str);
     }
-#endif
 }
 
 - (NSString*)urlStringWithRequest:(NSURLRequest*)request {

@@ -11,7 +11,6 @@ target "HBUtils" do
     pod 'PureLayout'
     pod 'AFNetworking', '3.1.0'
     pod 'MBProgressHUD', '~> 0.9.1'
-    pod 'VungleSDK-iOS', '6.4.5'
     
     # Workaround for Cocoapods issue #7606
     post_install do |installer|

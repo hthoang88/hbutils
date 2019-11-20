@@ -53,11 +53,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)key_googleAdRewardId;
 - (NSString*)key_googleAdEnable;
 
-//VungLe Ads
-- (NSString*)key_vungLeAdAppId;
-- (NSString*)key_vungLeAdRewardId;
-- (NSString*)key_vungLeAdEnable;
-
 //time
 - (NSString*)key_timeToShowFullAd;
 - (NSString*)key_rewardVideoMinimumTime;
@@ -85,10 +80,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *googleAdAppId;
 @property (strong, nonatomic) NSString *googleAdRewardId;
 @property (strong, nonatomic) NSNumber *googleAdEnable;
-
-@property (strong, nonatomic) NSNumber *vungleEnable;
-@property (strong, nonatomic) NSString *vungleAppId;
-@property (strong, nonatomic) NSString *vungLeAdRewardId;
 
 @property (strong, nonatomic) NSNumber *requireViewReward;
 @property (strong, nonatomic) NSString *adClickMsg;

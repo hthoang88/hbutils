@@ -112,9 +112,6 @@
     if (type == HBAdRewardTypeGoogle) {
         className = @"HBGoogleAdReward";
     }
-    else if (type == HBAdRewardTypeVungle) {
-        className = @"HBVungleRewardVideo";
-    }
     else {
         id val = [self valueWith:self.key_adClassName];
         if (val) {
@@ -201,19 +198,6 @@
     return @"key_googleAdEnable";
 }
 
-#pragma mark - Google Ads
-- (NSString*)key_vungLeAdAppId {
-    return @"key_vungLeAdAppId";
-}
-
-- (NSString*)key_vungLeAdRewardId {
-    return @"key_vungLeAdRewardId";
-}
-
-- (NSString*)key_vungLeAdEnable {
-    return @"key_vungLeAdEnable";
-}
-
 #pragma mark - Time
 - (NSString*)key_timeToShowRewardVideo {
     return @"key_timeToShowRewardVideo";
@@ -295,18 +279,6 @@
 
 - (NSNumber *)googleAdEnable {
     return [AD_PROVIDER valueWith:AD_PROVIDER.key_googleAdEnable];
-}
-#pragma mark - VungLe Ads
-- (NSString *)vungleAppId {
-    return [AD_PROVIDER valueWith:AD_PROVIDER.key_vungLeAdAppId];
-}
-
-- (NSString *)vungLeAdRewardId {
-    return [AD_PROVIDER valueWith:AD_PROVIDER.key_vungLeAdRewardId];
-}
-
-- (NSNumber *)vungleEnable {
-    return [AD_PROVIDER valueWith:AD_PROVIDER.key_vungLeAdEnable];
 }
 
 #pragma mark - Others

@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HBAdRewardProvider : NSObject
 + (nonnull HBAdRewardProvider*)shared;
 - (id<HBAdRewardProtocol>)reward:(HBAdRewardType)type;
-@property (strong, nonatomic) UILabel *rewardVideoLabel;
+@property (strong, nonatomic) UIView *rewardVideoView;
 @property (assign, nonatomic) BOOL isLoadingRewardVideo;
 @property (assign, nonatomic) BOOL isShowingRewardVideo;
 @property (assign, nonatomic) float volumnValue;

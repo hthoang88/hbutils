@@ -8,6 +8,7 @@
 
 #import "NSString+HBUtils.h"
 #import "UIImage+HBUtils.h"
+#import "HBUtilsMacros.h"
 
 @implementation NSString (HBUtils)
 
@@ -119,7 +120,7 @@
     }
 }
 
-- (NSString *)objectIdFromUrl {
+- (NSString*)objectIdFromUrl {
     NSString *href = self.copy;
     NSString *contentId = [href stringByRemovingPercentEncoding];
     contentId = [contentId.lastPathComponent stringByReplacingOccurrencesOfString:@" " withString:@""].trim;
@@ -127,7 +128,7 @@
     return contentId;
 }
 
-- (NSString *)stringByRemoveUnicode {
+- (NSString*)stringByRemoveUnicode {
     NSString *string = [self.copy trim];
     string = [string stringByReplacingOccurrencesOfString:@"Œ" withString:@"OE"];
     string = [string stringByReplacingOccurrencesOfString:@"œ" withString:@"oe"];
@@ -161,7 +162,7 @@
     return result;
 }
 
-- (NSString *)stringByRemoveHtmlTag {
+- (NSString*)stringByRemoveHtmlTag {
     if ([self.trim containsString:@"<"] ||
         [self.trim containsString:@"&amp;"] ||
         [self.trim containsString:@"&#2"]) {
@@ -178,4 +179,8 @@
     return [UIImage imageNamed:self].imageByRenderTemplate;
 }
 
+- (NSString*)inDocDir {
+    NSString *filePath = [DOCUMENTS_DIR() stringByAppendingPathComponent:self];
+    return filePath;
+}
 @end

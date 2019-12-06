@@ -59,4 +59,8 @@
     }
     return formSheetController;
 }
+
++ (instancetype)instance:(UIStoryboard*)storyboard {
+    return [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(self.class)];
+}
 @end

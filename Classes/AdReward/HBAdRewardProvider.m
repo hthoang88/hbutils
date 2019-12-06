@@ -48,7 +48,9 @@
     if (!shouldUpdateRewardCount) {
         return;
     }
-    USER_DEFAULT_UPDATE(key_RewardVideoFullCount, value, false);
+    if (self.admodConfig.enableMagicRewardVideo.boolValue) {
+        USER_DEFAULT_UPDATE(key_RewardVideoFullCount, value, false);
+    }
     USER_DEFAULT_UPDATE(key_LimitViewCount, value, false);
     
     NSInteger rewardCount = [USER_DEFAULT integerForKey:key_RewardVideoCount];
@@ -152,8 +154,9 @@
     }else {
         [lbl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(20, 5, 5, 5)];
     }
-    
-    USER_DEFAULT_SET(key_RewardVideoFullCount, 0, true);
+    if (self.admodConfig.enableMagicRewardVideo.boolValue) {
+        USER_DEFAULT_SET(key_RewardVideoFullCount, 0, true);        
+    }
     [inView addSubview:v];
     [v autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) excludingEdge:ALEdgeBottom];
     v.layer.cornerRadius = 4.0;
@@ -170,7 +173,7 @@
             [v removeFromSuperview];
         }
     });
-    AD_PROVIDER.rewardVideoLabel = (id)v;
+    AD_PROVIDER.rewardVideoView = v;
 }
 
 - (void)muteSoundForShowingRewardVideo {

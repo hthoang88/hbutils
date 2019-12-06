@@ -146,7 +146,7 @@
         }
     }
     if (!AD_PROVIDER.admodConfig.requireViewReward.boolValue) {
-        [AD_PROVIDER.rewardVideoLabel removeFromSuperview];
+        [AD_PROVIDER.rewardVideoView removeFromSuperview];
     }
     if (AD_PROVIDER.admodConfig.enableMuteAdSound.boolValue &&
         AD_PROVIDER.volumnValue > 0) {
@@ -228,7 +228,7 @@
         self.presentingSheet = nil;
     }
     DLog(@"Reward based video ad is closed.");
-    [AD_PROVIDER.rewardVideoLabel removeFromSuperview];
+    [AD_PROVIDER.rewardVideoView removeFromSuperview];
 }
 
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd {

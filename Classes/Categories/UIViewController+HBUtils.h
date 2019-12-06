@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
                                                              transitionStyle:(NSInteger)transitionStyle
                                                   canDissmissOnBackgroundTap:(BOOL)canDissmissONBackgroundTap;
 
++ (instancetype)instance:(UIStoryboard*)storyboard;
+
 @end
 
 NS_ASSUME_NONNULL_END

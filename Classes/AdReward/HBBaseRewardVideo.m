@@ -36,8 +36,11 @@
 }
 
 - (BOOL)shouldShowAdClickMessage {
-    return AD_PROVIDER.admodConfig.timeToShowFullAd.integerValue > 0 &&
-    AD_PROVIDER.admodConfig.rewardVideoMinimumTime.integerValue > 0;
+    if (self.shouldShowFullAds) {
+        return AD_PROVIDER.admodConfig.timeToShowFullAd.integerValue > 0 &&
+        AD_PROVIDER.admodConfig.rewardVideoMinimumTime.integerValue > 0;
+    }
+    return AD_PROVIDER.admodConfig.rewardVideoMinimumTime.integerValue > 0;
 }
 
 - (void)showAd:(BOOL)shouldReset {

@@ -34,13 +34,15 @@
 
 - (NSURL*)urlValue;
 
-- (NSString *)objectIdFromUrl;
+- (NSString*)objectIdFromUrl;
 
-- (NSString *)stringByRemoveUnicode;
+- (NSString*)stringByRemoveUnicode;
 
-- (NSString *)stringByReplacePatterns:(NSArray *)paterns;
+- (NSString*)stringByReplacePatterns:(NSArray *)paterns;
 
-- (NSString *)stringByRemoveHtmlTag;
+- (NSString*)stringByRemoveHtmlTag;
 
 - (UIImage*)imageRenderTemplate;
+
+- (NSString*)inDocDir;
 @end

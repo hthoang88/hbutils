@@ -124,9 +124,19 @@
 }
 
 + (instancetype)findFirst:(id)value source:(NSString*)source {
+    NSManagedObjectContext *context = NSManagedObjectContext.MR_defaultContext;
+    return [self findFirst:value source:source context:context];
+}
+
++ (instancetype)findFirst:(id)value source:(NSString*)source context:(NSManagedObjectContext*)context {
     if (value && source) {
         NSPredicate *pre = [NSPredicate predicateWithFormat:@"%K = %@ AND source = %@", [self primaryKey], value,  source];
-        NSArray *items = [self MR_findAllWithPredicate:pre];
+        NSFetchRequest *request = [self MR_createFetchRequestInContext:context];
+        [request setPredicate:pre];
+        //Doesn't include sub class
+        request.includesSubentities = false;
+        
+        NSArray *items = [self MR_executeFetchRequest:request inContext:context];
         if (items.count > 1) {
             DLog(@"OHHHHHH, Something went wrong: %@: %@", NSStringFromClass([self class]), [self primaryKey]);
             NSArray *subArray = [items subarrayWithRange:NSMakeRange(0, items.count - 1)];
@@ -137,7 +147,13 @@
         return items.lastObject;
     }
     else if (value) {
-        NSArray *items = [self MR_findByAttribute:[self primaryKey] withValue:value inContext:NSManagedObjectContext.MR_defaultContext];
+        NSPredicate *pre = [NSPredicate predicateWithFormat:@"%K = %@", [self primaryKey], value];
+        NSFetchRequest *request = [self MR_createFetchRequestInContext:context];
+        [request setPredicate:pre];
+        //Doesn't include sub class
+        request.includesSubentities = false;
+        
+        NSArray *items = [self MR_executeFetchRequest:request inContext:context];
         if (items.count > 1) {
             DLog(@"OHHHHHH, Something went wrong: %@: %@", NSStringFromClass([self class]), [self primaryKey]);
             NSArray *subArray = [items subarrayWithRange:NSMakeRange(0, items.count - 1)];
@@ -149,5 +165,4 @@
     }
     return nil;
 }
-
 @end

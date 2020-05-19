@@ -11,3 +11,8 @@
 @interface HBGoogleAdReward : HBBaseRewardVideo
 + (nonnull HBGoogleAdReward*)shared;
 @end
+
+/*
+ Should call this function in app delete
+ [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+ */

@@ -36,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)findFirst:(id)value source:(NSString* _Nullable)source;
 
++ (instancetype)findFirst:(id)value source:(NSString*)source context:(NSManagedObjectContext*)context;
 @end
 
 NS_ASSUME_NONNULL_END

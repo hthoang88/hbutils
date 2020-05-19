@@ -183,4 +183,5 @@ end
     spec.dependency 'UIScrollView-InfiniteScroll'
     spec.dependency 'WYPopoverController'
     spec.dependency 'iRate'
+    spec.dependency 'Google-Mobile-Ads-SDK'
 end

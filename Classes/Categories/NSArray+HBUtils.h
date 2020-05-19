@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray* _Nullable)minusArray:(NSArray*)otherArray;
 
-- (NSDictionary* _Nullable)findFirstDictionaryInArrayWithValue:(id)value
-                                                        forKey:(NSString*)key;
+- (NSDictionary* _Nullable)findFirstDictionary:(id)value
+                                        forKey:(NSString*)key;
 @end
 
 NS_ASSUME_NONNULL_END

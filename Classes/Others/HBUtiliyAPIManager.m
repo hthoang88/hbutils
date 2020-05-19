@@ -120,6 +120,29 @@
         }
     }];
 }
+
+- (NSURLSessionDownloadTask *)downloadTaskWithRequest:(NSURLRequest *)request
+                                             progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+                                          destination:(NSURL * (^)(NSURL *targetPath, NSURLResponse *response))destination
+                                    completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler
+{
+    return [super downloadTaskWithRequest:request
+                                 progress:downloadProgressBlock
+                              destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+                                  NSURL *urlPath = destination(targetPath, response);
+                                  if ([response isKindOfClass:NSHTTPURLResponse.class]) {
+                                      NSHTTPURLResponse *httpResponse = (id)response;
+                                      if (httpResponse.statusCode == 200) {
+                                          DLog(@"Remove old file %@", urlPath.absoluteString);
+                                          [NSFileManager.defaultManager removeItemAtURL:urlPath error:nil];
+                                      }
+                                  }
+                                  return urlPath;
+                              }
+                        completionHandler:completionHandler];
+    
+}
+
 - (void)cancelAllTasks
 {
     if (self.operationQueue.operations.count > 0) {

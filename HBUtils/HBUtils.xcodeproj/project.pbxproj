@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AD038C902340DE7400E5668E /* HBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AD038C8E2340DE7400E5668E /* HBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD286B5923693B540042A291 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD286B5823693B540042A291 /* GoogleMobileAds.framework */; };
 		AD3D113B2378675B00EBF470 /* HBUtilsBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3D11392378675B00EBF470 /* HBUtilsBaseView.h */; };
 		AD3D113C2378675B00EBF470 /* HBUtilsBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3D113A2378675B00EBF470 /* HBUtilsBaseView.m */; };
 		AD3D113F237867B700EBF470 /* HBUtilsBaseFormSheetVC.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3D113D237867B700EBF470 /* HBUtilsBaseFormSheetVC.h */; };
@@ -133,7 +132,6 @@
 		AD038C8B2340DE7400E5668E /* HBUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HBUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD038C8E2340DE7400E5668E /* HBUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtils.h; sourceTree = "<group>"; };
 		AD038C8F2340DE7400E5668E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD286B5823693B540042A291 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		AD3D11392378675B00EBF470 /* HBUtilsBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseView.h; sourceTree = "<group>"; };
 		AD3D113A2378675B00EBF470 /* HBUtilsBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilsBaseView.m; sourceTree = "<group>"; };
 		AD3D113D237867B700EBF470 /* HBUtilsBaseFormSheetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseFormSheetVC.h; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD286B5923693B540042A291 /* GoogleMobileAds.framework in Frameworks */,
 				D24ADBA4BF34D54D1A5E02FF /* Pods_HBUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +304,6 @@
 		AD286B5723693B540042A291 /* VendoredFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AD286B5823693B540042A291 /* GoogleMobileAds.framework */,
 			);
 			path = VendoredFrameworks;
 			sourceTree = SOURCE_ROOT;
@@ -965,7 +961,7 @@
 				);
 				INFOPLIST_FILE = HBUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -997,7 +993,7 @@
 				);
 				INFOPLIST_FILE = HBUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

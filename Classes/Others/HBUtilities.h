@@ -16,4 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (CGFloat)keyboardHeighWithNotification:(NSNotification*)note;
 @end
 
+@interface HBUtilities (CoreData)
++ (void)saveCoreData;
+
++ (void)setupCoreData;
+@end
+
 NS_ASSUME_NONNULL_END

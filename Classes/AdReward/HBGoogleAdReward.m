@@ -13,7 +13,8 @@
 @import GoogleMobileAds;
 @import AVFoundation;
 
-@interface HBGoogleAdReward()<GADRewardBasedVideoAdDelegate>
+@interface HBGoogleAdReward()<GADRewardedAdDelegate>
+@property(nonatomic, strong) GADRewardedAd *rewardedAd;
 @end
 
 
@@ -38,17 +39,27 @@
 
 #pragma mark - HBAdRewardProtocol
 - (void)configAd {
-    [GADMobileAds configureWithApplicationID:AD_PROVIDER.admodConfig.googleAdAppId];
+    //Does not config applicationID, GADMobileAds will load from plist file
+    //    [GADMobileAds configureWithApplicationID:AD_PROVIDER.admodConfig.googleAdAppId];
+#ifdef DEBUG
+    //Test App for reward video
+//    Rewarded Video     ca-app-pub-3940256099942544/1712485313
+    GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
+    @[@"ca-app-pub-3940256099942544/1712485313"];
+#endif
+    
+    self.rewardedAd = [[GADRewardedAd alloc]
+                       initWithAdUnitID:AD_PROVIDER.admodConfig.googleAdRewardId];
     [self loadAd];
 }
 
 - (void)loadAd {
-    [GADRewardBasedVideoAd sharedInstance].delegate = self;
+
     if (AD_PROVIDER.isShowingRewardVideo) {
         return;
     }
     
-    if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
+    if (self.rewardedAd.isReady) {
         NSInteger rewardCount = [USER_DEFAULT integerForKey:key_RewardVideoCount];
         UIViewController *rootVC = [AD_PROVIDER valueWith:AD_PROVIDER.key_rootVC];
         if (rootVC &&
@@ -62,11 +73,22 @@
             DLog(@"%@: loadAd", NSStringFromClass([self class]));
             
             GADRequest *request = [GADRequest request];
-#ifdef DEBUG
-            request.testDevices = @[kGADSimulatorID];
-#endif
-            [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
-                                                   withAdUnitID:AD_PROVIDER.admodConfig.googleAdRewardId];
+            [self.rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
+                if (error) {
+                    AD_PROVIDER.isLoadingRewardVideo = false;
+                    AD_PROVIDER.isShowingRewardVideo = false;
+                    DLog(@"Reward based video ad failed to load. %@", error.debugDescription);
+                }else {
+                    if (self.rewardedAd.isReady) {
+                        NSInteger rewardCount = [USER_DEFAULT integerForKey:key_RewardVideoCount];
+                        UIViewController *rootVC = [AD_PROVIDER valueWith:AD_PROVIDER.key_rootVC];
+                        if (rootVC &&
+                            rewardCount >= AD_PROVIDER.admodConfig.timeToShowRewardVideo.integerValue) {
+                            [self showAd:true];
+                        }
+                    }
+                }
+            }];
         }
     }
 }
@@ -85,12 +107,12 @@
         HBProgressHUD* hub = [window showHUDText:str hideAfterSecond:2.0 completion:^{
             if (!self.shouldShowFullAds) {
                 [self showSheetCompletion:^(UIViewController *contentViewController) {
-                    [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:contentViewController];
+                    [self.rewardedAd presentFromRootViewController:contentViewController delegate:self];
                 }];
             }else {
                 if (rootVC.view.window) {
                     AD_PROVIDER.isShowingRewardVideo = true;
-                    [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:rootVC];
+                    [self.rewardedAd presentFromRootViewController:rootVC delegate:self];
                 }
             }
         }];
@@ -98,20 +120,22 @@
     }else {
         if (!self.shouldShowFullAds) {
             [self showSheetCompletion:^(UIViewController *contentViewController) {
-                [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:contentViewController];
+                [self.rewardedAd presentFromRootViewController:contentViewController delegate:self];
             }];
         }else {
             if (rootVC.view.window) {
                 AD_PROVIDER.isShowingRewardVideo = true;
-                [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:rootVC];
+                [self.rewardedAd presentFromRootViewController:rootVC delegate:self];
             }
         }
     }
 }
 
-#pragma mark - GADRewardBasedVideoAdDelegate
-- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
-   didRewardUserWithReward:(GADAdReward *)reward {
+#pragma mark - GADRewardedAdDelegate
+
+/// Tells the delegate that the user earned a reward.
+- (void)rewardedAd:(nonnull GADRewardedAd *)rewardedAd
+ userDidEarnReward:(nonnull GADAdReward *)reward {
     DLog(@"didRewardUserWithReward");
     AD_PROVIDER.isShowingRewardVideo = false;
     
@@ -155,26 +179,22 @@
     [AD_PROVIDER resetStatusBarState];
 }
 
-- (void)rewardBasedVideoAdDidReceiveAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    DLog(@"Reward based video ad is received.");
-    if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
-        NSInteger rewardCount = [USER_DEFAULT integerForKey:key_RewardVideoCount];
-        UIViewController *rootVC = [AD_PROVIDER valueWith:AD_PROVIDER.key_rootVC];
-        if (rootVC &&
-            rewardCount >= AD_PROVIDER.admodConfig.timeToShowRewardVideo.integerValue) {
-            [self showAd:true];
-        }
+/// Tells the delegate that the rewarded ad failed to present.
+- (void)rewardedAd:(nonnull GADRewardedAd *)rewardedAd
+didFailToPresentWithError:(nonnull NSError *)error {
+    DLog(@"rewardedAd-didFailToPresentWithError: %@", error);
+    AD_PROVIDER.isShowingRewardVideo = false;
+    if (self.presentingSheet) {
+        [self.presentingSheet dismissViewControllerAnimated:false completion:nil];
+        self.presentingSheet = nil;
     }
+    DLog(@"Reward based video ad is closed.");
+    [AD_PROVIDER.rewardVideoView removeFromSuperview];
 }
 
-- (void)rewardBasedVideoAdDidOpen:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    DLog(@"Opened reward based video ad.");
-}
-
-
-- (void)rewardBasedVideoAdDidStartPlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    DLog(@"Reward based video ad started playing.");
-    
+/// Tells the delegate that the rewarded ad was presented.
+- (void)rewardedAdDidPresent:(nonnull GADRewardedAd *)rewardedAd {
+    DLog(@"rewardedAdDidPresent");
     BOOL hasTranView = NO;
     UIViewController *vc = [self currentRootVC];
     
@@ -221,7 +241,9 @@
     }
 }
 
-- (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
+/// Tells the delegate that the rewarded ad was dismissed.
+- (void)rewardedAdDidDismiss:(nonnull GADRewardedAd *)rewardedAd {
+    DLog(@"rewardedAdDidDismiss");
     AD_PROVIDER.isShowingRewardVideo = false;
     if (self.presentingSheet) {
         [self.presentingSheet dismissViewControllerAnimated:false completion:nil];
@@ -231,14 +253,4 @@
     [AD_PROVIDER.rewardVideoView removeFromSuperview];
 }
 
-- (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    AD_PROVIDER.isShowingRewardVideo = false;
-    DLog(@"Reward based video ad will leave application.");
-}
-
-- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
-    didFailToLoadWithError:(NSError *)error {
-    AD_PROVIDER.isLoadingRewardVideo = false;
-    DLog(@"Reward based video ad failed to load. %@", error.debugDescription);
-}
 @end

@@ -24,7 +24,8 @@
     return [mutableSet1 allObjects];
 }
 
-- (NSDictionary* _Nullable)findFirstDictionaryInArrayWithValue:(id)value forKey:(NSString*)key
+- (NSDictionary* _Nullable)findFirstDictionary:(id)value
+                                        forKey:(NSString*)key
 {
     if (!value ||
         !key) {

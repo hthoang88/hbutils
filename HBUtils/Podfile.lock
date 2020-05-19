@@ -14,31 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Google-Mobile-Ads-SDK (7.59.0):
-    - GoogleAppMeasurement (~> 6.0)
-  - GoogleAppMeasurement (6.5.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
-    - GoogleUtilities/MethodSwizzler (~> 6.0)
-    - GoogleUtilities/Network (~> 6.0)
-    - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (~> 1.30905.0)
-  - GoogleUtilities/AppDelegateSwizzler (6.6.0):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.6.0):
-    - PromisesObjC (~> 1.2)
-  - GoogleUtilities/Logger (6.6.0):
-    - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.6.0):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.6.0):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.6.0)"
-  - GoogleUtilities/Reachability (6.6.0):
-    - GoogleUtilities/Logger
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -46,17 +21,10 @@ PODS:
   - MZAppearance (1.1.6)
   - MZFormSheetPresentationController (2.4.3):
     - MZAppearance
-  - nanopb (1.30905.0):
-    - nanopb/decode (= 1.30905.0)
-    - nanopb/encode (= 1.30905.0)
-  - nanopb/decode (1.30905.0)
-  - nanopb/encode (1.30905.0)
-  - PromisesObjC (1.2.8)
   - PureLayout (3.1.5)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
-  - Google-Mobile-Ads-SDK
   - MagicalRecord
   - MBProgressHUD (~> 0.9.1)
   - MZFormSheetPresentationController (~> 2.4.2)
@@ -65,30 +33,20 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - Google-Mobile-Ads-SDK
-    - GoogleAppMeasurement
-    - GoogleUtilities
     - MagicalRecord
     - MBProgressHUD
     - MZAppearance
     - MZFormSheetPresentationController
-    - nanopb
-    - PromisesObjC
     - PureLayout
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Google-Mobile-Ads-SDK: 118217ac8b80e28aabe0c00aedab1cd885857776
-  GoogleAppMeasurement: 4c644d86835d827bab30ab6aabb9ecaf1f500735
-  GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: fbfdbad31884f16fac17fbe3c44c168306cc1095
-  nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
-  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
 
-PODFILE CHECKSUM: b8daf669c31d97f8d97ebeb3722ee7757a6a68df
+PODFILE CHECKSUM: cedb2ace2c20990ca413b7fd18f293df294bd71b
 
 COCOAPODS: 1.9.1

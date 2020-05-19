@@ -1,10 +1,11 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/MZAppearance" "${PODS_CONFIGURATION_BUILD_DIR}/MZFormSheetPresentationController" "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord" "${PODS_CONFIGURATION_BUILD_DIR}/PureLayout"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord/MagicalRecord.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MZAppearance/MZAppearance.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord/MagicalRecord.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PureLayout/PureLayout.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord/MagicalRecord.framework/Headers" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord"
-OTHER_LDFLAGS = $(inherited) -framework "CoreData" -framework "MagicalRecord"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/MZAppearance/MZAppearance.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord/MagicalRecord.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/PureLayout/PureLayout.framework/Headers" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/MZAppearance" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/MZFormSheetPresentationController" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/MagicalRecord" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/PureLayout"
+OTHER_LDFLAGS = $(inherited) -framework "AFNetworking" -framework "CoreData" -framework "CoreGraphics" -framework "MBProgressHUD" -framework "MZAppearance" -framework "MZFormSheetPresentationController" -framework "MagicalRecord" -framework "MobileCoreServices" -framework "PureLayout" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

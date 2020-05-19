@@ -105,13 +105,6 @@
 		AD95299D23668BC9000D8195 /* UIViewController+HBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */; };
 		AD9529A023668CBC000D8195 /* HBUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = AD95299E23668CBC000D8195 /* HBUtilities.h */; };
 		AD9529A123668CBC000D8195 /* HBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95299F23668CBC000D8195 /* HBUtilities.m */; };
-		AD9529AA2366A316000D8195 /* HBAdRewardProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A32366A316000D8195 /* HBAdRewardProvider.h */; };
-		AD9529AB2366A316000D8195 /* HBBaseRewardVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A42366A316000D8195 /* HBBaseRewardVideo.h */; };
-		AD9529AC2366A316000D8195 /* HBGoogleAdReward.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9529A52366A316000D8195 /* HBGoogleAdReward.m */; };
-		AD9529AD2366A316000D8195 /* HBAdRewardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9529A62366A316000D8195 /* HBAdRewardProvider.m */; };
-		AD9529AE2366A316000D8195 /* HBAdRewardProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A72366A316000D8195 /* HBAdRewardProtocol.h */; };
-		AD9529AF2366A316000D8195 /* HBGoogleAdReward.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9529A82366A316000D8195 /* HBGoogleAdReward.h */; };
-		AD9529B02366A316000D8195 /* HBBaseRewardVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */; };
 		ADCEB6762359A1ED00794BE5 /* HBUtilsBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCEB6742359A1ED00794BE5 /* HBUtilsBaseCell.h */; };
 		ADCEB6772359A1ED00794BE5 /* HBUtilsBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCEB6752359A1ED00794BE5 /* HBUtilsBaseCell.m */; };
 		ADCEB67A2359A28700794BE5 /* HBUtilsBaseCVC.h in Headers */ = {isa = PBXBuildFile; fileRef = ADCEB6782359A28700794BE5 /* HBUtilsBaseCVC.h */; };
@@ -229,13 +222,6 @@
 		AD95299B23668BC9000D8195 /* UIViewController+HBUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HBUtils.m"; sourceTree = "<group>"; };
 		AD95299E23668CBC000D8195 /* HBUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilities.h; sourceTree = "<group>"; };
 		AD95299F23668CBC000D8195 /* HBUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilities.m; sourceTree = "<group>"; };
-		AD9529A32366A316000D8195 /* HBAdRewardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAdRewardProvider.h; sourceTree = "<group>"; };
-		AD9529A42366A316000D8195 /* HBBaseRewardVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBaseRewardVideo.h; sourceTree = "<group>"; };
-		AD9529A52366A316000D8195 /* HBGoogleAdReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBGoogleAdReward.m; sourceTree = "<group>"; };
-		AD9529A62366A316000D8195 /* HBAdRewardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAdRewardProvider.m; sourceTree = "<group>"; };
-		AD9529A72366A316000D8195 /* HBAdRewardProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAdRewardProtocol.h; sourceTree = "<group>"; };
-		AD9529A82366A316000D8195 /* HBGoogleAdReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBGoogleAdReward.h; sourceTree = "<group>"; };
-		AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBaseRewardVideo.m; sourceTree = "<group>"; };
 		ADCEB6742359A1ED00794BE5 /* HBUtilsBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseCell.h; sourceTree = "<group>"; };
 		ADCEB6752359A1ED00794BE5 /* HBUtilsBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBUtilsBaseCell.m; sourceTree = "<group>"; };
 		ADCEB6782359A28700794BE5 /* HBUtilsBaseCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBUtilsBaseCVC.h; sourceTree = "<group>"; };
@@ -521,7 +507,6 @@
 			isa = PBXGroup;
 			children = (
 				AD891C84236927CC005F60AE /* SIAlertView */,
-				AD9529A22366A316000D8195 /* AdReward */,
 				AD6EC4E5235D48DC00F3AC62 /* FastEasyMapping */,
 				AD6EC448235D3A4100F3AC62 /* Categories */,
 				AD6EC444235D3A4100F3AC62 /* Others */,
@@ -542,20 +527,6 @@
 				AD891C89236927CC005F60AE /* UIWindow+SIUtils.m */,
 			);
 			path = SIAlertView;
-			sourceTree = "<group>";
-		};
-		AD9529A22366A316000D8195 /* AdReward */ = {
-			isa = PBXGroup;
-			children = (
-				AD9529A72366A316000D8195 /* HBAdRewardProtocol.h */,
-				AD9529A32366A316000D8195 /* HBAdRewardProvider.h */,
-				AD9529A62366A316000D8195 /* HBAdRewardProvider.m */,
-				AD9529A42366A316000D8195 /* HBBaseRewardVideo.h */,
-				AD9529A92366A316000D8195 /* HBBaseRewardVideo.m */,
-				AD9529A82366A316000D8195 /* HBGoogleAdReward.h */,
-				AD9529A52366A316000D8195 /* HBGoogleAdReward.m */,
-			);
-			path = AdReward;
 			sourceTree = "<group>";
 		};
 		ADCEB6732359A1D400794BE5 /* BaseClasses */ = {
@@ -612,12 +583,10 @@
 				AD6EC524235D48DD00F3AC62 /* FEMObjectMapping.h in Headers */,
 				AD6EC46F235D3A4100F3AC62 /* UIView+HBUtils.h in Headers */,
 				AD6EC532235D48DD00F3AC62 /* FEMAssignmentPolicyMetadata.h in Headers */,
-				AD9529AB2366A316000D8195 /* HBBaseRewardVideo.h in Headers */,
 				AD6EC469235D3A4100F3AC62 /* HBDefineColor.h in Headers */,
 				AD6EC538235D48DD00F3AC62 /* FEMExcludableCollection.h in Headers */,
 				AD6EC52F235D48DD00F3AC62 /* FEMCache.h in Headers */,
 				AD6EC46A235D3A4100F3AC62 /* NSDictionary+HBUtils.h in Headers */,
-				AD9529AA2366A316000D8195 /* HBAdRewardProvider.h in Headers */,
 				AD6EC486235D3A4100F3AC62 /* NSString+HBUtils.h in Headers */,
 				AD891C82236925AE005F60AE /* HBUtilities+Alert.h in Headers */,
 				AD6EC474235D3A4100F3AC62 /* UIButton+HBUtils.h in Headers */,
@@ -643,14 +612,12 @@
 				AD6EC482235D3A4100F3AC62 /* NSNumber+HBUtils.h in Headers */,
 				AD8D6785236A899700DA954D /* HBUtils-Bridging-Header.h in Headers */,
 				AD6EC471235D3A4100F3AC62 /* NSObject+HBUtils.h in Headers */,
-				AD9529AE2366A316000D8195 /* HBAdRewardProtocol.h in Headers */,
 				AD6EC47C235D3A4100F3AC62 /* NSDate+HBUtils.h in Headers */,
 				AD891C9723692BEB005F60AE /* NSError+HBUtils.h in Headers */,
 				AD6EC487235D3A4100F3AC62 /* UITextView+HBUtils.h in Headers */,
 				AD6EC51C235D48DD00F3AC62 /* FEMAttribute.h in Headers */,
 				AD6EC53C235D48DD00F3AC62 /* NSObject+FEMKVCExtension.h in Headers */,
 				ADCEB67A2359A28700794BE5 /* HBUtilsBaseCVC.h in Headers */,
-				AD9529AF2366A316000D8195 /* HBGoogleAdReward.h in Headers */,
 				AD6EC53F235D48DD00F3AC62 /* FEMTypeIntrospection.h in Headers */,
 				AD9529A023668CBC000D8195 /* HBUtilities.h in Headers */,
 				ADCEB67E2359A2F000794BE5 /* HBUtilsBaseVC.h in Headers */,
@@ -777,7 +744,6 @@
 				ADCEB67B2359A28700794BE5 /* HBUtilsBaseCVC.m in Sources */,
 				AD6EC475235D3A4100F3AC62 /* UITextView+HBUtils.m in Sources */,
 				AD6EC52A235D48DD00F3AC62 /* FEMManagedObjectDeserializer.m in Sources */,
-				AD9529AC2366A316000D8195 /* HBGoogleAdReward.m in Sources */,
 				AD891C83236925AE005F60AE /* HBUtilities+Alert.m in Sources */,
 				AD6EC473235D3A4100F3AC62 /* NSNumber+HBUtils.m in Sources */,
 				AD6EC478235D3A4100F3AC62 /* UIImage+HBUtils.m in Sources */,
@@ -799,7 +765,6 @@
 				AD6EC46C235D3A4100F3AC62 /* UITableView+HBUtils.m in Sources */,
 				AD6EC46E235D3A4100F3AC62 /* NSArray+HBUtils.m in Sources */,
 				AD6EC52B235D48DD00F3AC62 /* FEMObjectDeserializer.m in Sources */,
-				AD9529AD2366A316000D8195 /* HBAdRewardProvider.m in Sources */,
 				AD3D1140237867B700EBF470 /* HBUtilsBaseFormSheetVC.m in Sources */,
 				AD6EC470235D3A4100F3AC62 /* NSDate+HBUtils.m in Sources */,
 				AD3D113C2378675B00EBF470 /* HBUtilsBaseView.m in Sources */,
@@ -807,7 +772,6 @@
 				AD6EC481235D3A4100F3AC62 /* UIButton+HBUtils.m in Sources */,
 				AD6EC522235D48DD00F3AC62 /* FEMRelationship.m in Sources */,
 				AD891C9823692BEB005F60AE /* NSURLSessionTask+HBUtils.m in Sources */,
-				AD9529B02366A316000D8195 /* HBBaseRewardVideo.m in Sources */,
 				AD6EC46B235D3A4100F3AC62 /* UITextField+HBUtils.m in Sources */,
 				ADCEB6772359A1ED00794BE5 /* HBUtilsBaseCell.m in Sources */,
 				AD6EC537235D48DD00F3AC62 /* FEMMergeableCollection.m in Sources */,

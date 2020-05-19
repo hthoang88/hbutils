@@ -84,7 +84,6 @@ The UYLPasswordManager class provides a simple wrapper around Apple Keychain
 
   spec.source       = { :git => "https://github.com/hthoang88/hbutils.git", :tag => "v#{spec.version}" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
@@ -93,15 +92,14 @@ The UYLPasswordManager class provides a simple wrapper around Apple Keychain
   #  Not including the public_header_files will make all headers public.
   #
 
+spec.subspec 'BaseClasses' do |ss|
+    ss.platform = :ios, '9.0'
+    ss.ios.source_files = 'Classes/BaseClasses/*.{h,m}'
+end
 
 spec.subspec 'Categories' do |ss|
     ss.platform = :ios, '9.0'
     ss.ios.source_files = 'Classes/Categories/*.{h,m}'
-end
-
-spec.subspec 'BaseClasses' do |ss|
-    ss.platform = :ios, '9.0'
-    ss.ios.source_files = 'Classes/BaseClasses/*.{h,m}'
 end
 
 spec.subspec 'Extobjc' do |ss|
@@ -109,24 +107,19 @@ spec.subspec 'Extobjc' do |ss|
     ss.ios.source_files = 'Classes/Extobjc/*.{h,m}'
 end
 
+spec.subspec 'FastEasyMapping' do |ss|
+    ss.platform = :ios, '9.0'
+    ss.ios.source_files = "Classes/FastEasyMapping/**/*.{h,m}"
+end
+
 spec.subspec 'Others' do |ss|
     ss.platform = :ios, '9.0'
     ss.ios.source_files = 'Classes/Others/*.{h,m}'
 end
 
-spec.subspec 'AdReward' do |ss|
-    ss.platform = :ios, '9.0'
-ss.ios.source_files = "Classes/AdReward/*.{h,m}"
-end
-
 spec.subspec 'SIAlertView' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = "Classes/SIAlertView/*.{h,m}"
-end
-
-spec.subspec 'FastEasyMapping' do |ss|
-ss.platform = :ios, '9.0'
-ss.ios.source_files = "Classes/FastEasyMapping/**/*.{h,m}"
+    ss.platform = :ios, '9.0'
+    ss.ios.source_files = "Classes/SIAlertView/*.{h,m}"
 end
 
   # spec.source_files  = "Classes", "Classes/*.{h,m}", "Classes/*/*.{h,m}"
@@ -183,5 +176,4 @@ end
     spec.dependency 'UIScrollView-InfiniteScroll'
     spec.dependency 'WYPopoverController'
     spec.dependency 'iRate'
-    spec.dependency 'Google-Mobile-Ads-SDK'
 end
